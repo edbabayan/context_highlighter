@@ -1,11 +1,11 @@
-import os
 import json
+from pathlib import Path
 from docling.datamodel.base_models import InputFormat
 from docling.document_converter import DocumentConverter, PdfFormatOption
 from docling.datamodel.pipeline_options import PdfPipelineOptions
 
 
-def extract_tables_from_pdf(pdf_path: str, output_dir: str, output_filename: str = "tables.json"):
+def extract_tables_from_pdf(pdf_path: str, output_dir: Path):
     # Prepare options for table extraction
     pipeline_options = PdfPipelineOptions(do_table_structure=True)
     pipeline_options.table_structure_options.do_cell_matching = False
@@ -34,15 +34,10 @@ def extract_tables_from_pdf(pdf_path: str, output_dir: str, output_filename: str
         for table in document.document.tables
     ]
 
-    # Ensure output directory exists
-    os.makedirs(output_dir, exist_ok=True)
-
-    # Save to JSON file
-    output_path = os.path.join(output_dir, output_filename)
-    with open(output_path, "w") as f:
+    with open(output_dir, "w") as f:
         json.dump(table_data, f, indent=4)
 
-    print(f"Saved extracted tables metadata to {output_path}")
+    print(f"Saved extracted tables metadata to {output_dir}")
 
 if __name__ == '__main__':
     from src.config import CFG
