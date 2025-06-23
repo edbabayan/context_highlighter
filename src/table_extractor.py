@@ -5,6 +5,39 @@ from docling.document_converter import DocumentConverter, PdfFormatOption
 from docling.datamodel.pipeline_options import PdfPipelineOptions
 
 
+def sort_tables_by_position(table_data):
+    """
+    Sort tables by page, then by height (top to bottom), then by left position.
+    
+    For BOTTOMLEFT coordinate system:
+    - Higher 't' values = higher on page (top)
+    - Lower 't' values = lower on page (bottom)
+    
+    Args:
+        table_data: List of table dictionaries with bbox information
+        
+    Returns:
+        Sorted list of tables
+    """
+    def sort_key(table):
+        page = table['page']
+        bbox = table['bbox']
+        coord_origin = table['coord_origin']
+        
+        if coord_origin == 'BOTTOMLEFT':
+            # For BOTTOMLEFT: higher 't' = higher on page, so we want descending order
+            height_key = -bbox['t']  # Negative for descending sort (top to bottom)
+        else:  # TOPLEFT
+            # For TOPLEFT: lower 't' = higher on page, so we want ascending order
+            height_key = bbox['t']
+        
+        left_key = bbox['l']  # Left to right (ascending)
+        
+        return page, height_key, left_key
+    
+    return sorted(table_data, key=sort_key)
+
+
 def extract_tables_from_pdf(pdf_path: str, output_dir: Path):
     # Prepare options for table extraction
     pipeline_options = PdfPipelineOptions(do_table_structure=True)
@@ -33,11 +66,15 @@ def extract_tables_from_pdf(pdf_path: str, output_dir: Path):
         }
         for table in document.document.tables
     ]
+    
+    # Sort tables by page, then by height (top to bottom), then by left position
+    sorted_table_data = sort_tables_by_position(table_data)
 
     with open(output_dir, "w") as f:
-        json.dump(table_data, f, indent=4)
+        json.dump(sorted_table_data, f, indent=4)
 
     print(f"Saved extracted tables metadata to {output_dir}")
+
 
 if __name__ == '__main__':
     from src.config import CFG
