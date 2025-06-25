@@ -1,117 +1,34 @@
 import fitz  # PyMuPDF
 import json
 
-def get_table_info_for_page(tables_json_path, page_number):
-    """
-    Get information about all tables on a specific page, sorted by position.
-    
-    Args:
-        tables_json_path: Path to the tables metadata JSON file
-        page_number: Page number to get tables for
-        
-    Returns:
-        List of table info with position details
-    """
-    with open(tables_json_path, 'r') as f:
-        tables_data = json.load(f)
-    
-    page_tables = [table for table in tables_data if table['page'] == page_number]
-    
-    print(f"\n=== Tables on page {page_number} ===")
-    for i, table in enumerate(page_tables):
-        bbox = table['bbox']
-        coord_origin = table['coord_origin']
-        
-        if coord_origin == 'BOTTOMLEFT':
-            print(f"Table {i}: Top={bbox['t']:.1f}, Left={bbox['l']:.1f}, Right={bbox['r']:.1f}, Bottom={bbox['b']:.1f} ({coord_origin})")
-        else:
-            print(f"Table {i}: Top={bbox['t']:.1f}, Left={bbox['l']:.1f}, Right={bbox['r']:.1f}, Bottom={bbox['b']:.1f} ({coord_origin})")
-    
-    return page_tables
 
-def highlight_phrase_in_table(pdf_path, output_path, page_number, phrase, table_index=0, tables_json_path="tables.json"):
+def highlight_sentences_on_page(pdf_path, output_path, page_number, sentences):
     """
-    Highlight a phrase within a specific table on a page.
-    Tables are now indexed by position: top-to-bottom, then left-to-right.
+    Highlight multiple sentences on a specific page using simple search and highlight.
     
     Args:
         pdf_path: Path to the PDF file
         output_path: Path to save the highlighted PDF
-        page_number: Page number (0-indexed)
-        phrase: Text phrase to highlight
-        table_index: Index of the table on the page (0=top-left table, 1=next table, etc.)
-        tables_json_path: Path to the tables metadata JSON file
+        page_number: Page number (1-indexed)
+        sentences: List of sentences to highlight
     """
-    print(f"\n=== Searching for '{phrase}' in table {table_index} on page {page_number} ===")
+    pdf = fitz.open(pdf_path)
     
-    # Load table metadata (now pre-sorted by position)
-    with open(tables_json_path, 'r') as f:
-        tables_data = json.load(f)
-    
-    # Find tables on the specified page (already sorted by position)
-    page_tables = [table for table in tables_data if table['page'] == page_number]
-    
-    if not page_tables:
-        print(f"No tables found on page {page_number}")
+    if page_number < 1 or page_number > len(pdf):
+        print(f"Invalid page number {page_number}")
+        pdf.close()
         return
     
-    # Show all available tables on this page
-    print(f"Found {len(page_tables)} table(s) on page {page_number}:")
-    for i, table in enumerate(page_tables):
-        bbox = table['bbox']
-        coord_origin = table['coord_origin']
-        print(f"  Table {i}: Top={bbox['t']:.1f}, Left={bbox['l']:.1f} ({coord_origin})")
+    page = pdf[page_number - 1]
     
-    if table_index >= len(page_tables):
-        print(f"Table index {table_index} not found on page {page_number}. Available indices: 0-{len(page_tables)-1}")
-        return
+    for sentence in sentences:
+        quads = page.search_for(sentence)
+        if quads:
+            page.add_highlight_annot(quads)
     
-    target_table = page_tables[table_index]
-    table_bbox = target_table['bbox']
-    print(f"Targeting table {table_index}: Top={table_bbox['t']:.1f}, Left={table_bbox['l']:.1f}")
-    
-    doc = fitz.open(pdf_path)
-    page = doc[page_number-1]
-    page_height = page.rect.height
-    
-    # Convert table bbox to PyMuPDF coordinates
-    if target_table['coord_origin'] == 'BOTTOMLEFT':
-        table_rect = fitz.Rect(
-            table_bbox['l'], 
-            page_height - table_bbox['t'],
-            table_bbox['r'], 
-            page_height - table_bbox['b']
-        )
-    else:  # TOPLEFT
-        table_rect = fitz.Rect(
-            table_bbox['l'], 
-            table_bbox['t'],
-            table_bbox['r'], 
-            table_bbox['b']
-        )
-    
-    # Search for phrase in the entire page
-    text_instances = page.search_for(phrase)
-    
-    # Filter instances that fall within the table bounds
-    table_instances = []
-    for inst in text_instances:
-        if table_rect.intersects(inst):
-            table_instances.append(inst)
-    
-    if not table_instances:
-        print(f"Phrase '{phrase}' not found in table {table_index} on page {page_number}")
-        doc.close()
-        return
-    
-    # Highlight the instances found in the table
-    for inst in table_instances:
-        highlight = page.add_highlight_annot(inst)
-        highlight.update()
-    
-    doc.save(output_path)
-    doc.close()
-    print(f"Highlighted '{phrase}' in table {table_index} on page {page_number}, saved to {output_path}")
+    pdf.save(output_path)
+    pdf.close()
+    print(f"Highlighted {len(sentences)} sentences on page {page_number}, saved to {output_path}")
 
 def highlight_phrase(pdf_path, output_path, page_number, phrase):
     doc = fitz.open(pdf_path)
