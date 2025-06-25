@@ -6,6 +6,7 @@ _pdf_path = "/Users/eduard_babayan/Documents/context_highlighter/Document.pdf"
 sentences_to_highlight = [
     "Employer-related common stock funds",
 ]
+
 target_page = 17
 
 highlight_sentences_on_page(

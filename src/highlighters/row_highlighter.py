@@ -1,5 +1,4 @@
 import fitz  # PyMuPDF
-import json
 
 
 def highlight_sentences_on_page(pdf_path, output_path, page_number, sentences):
