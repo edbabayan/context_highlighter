@@ -1,114 +1,148 @@
 # Context Highlighter
 
-A Python tool for precisely highlighting text phrases within specific tables in PDF documents.
+A Python tool for highlighting text phrases in PDF documents using two different approaches: standard text search and OCR-based highlighting.
 
 ## Overview
 
-This project solves the challenge of highlighting text in complex PDF documents with multiple tables on the same page. Instead of highlighting all occurrences of a phrase, it allows you to target specific tables by their position.
+This project provides flexible text highlighting capabilities for PDF documents. You can choose between standard text search (for searchable PDFs) or OCR-based highlighting (for scanned PDFs or images).
 
 ## Key Features
 
-- **Table Detection**: Automatically extracts and indexes all tables from PDF documents
-- **Position-Based Indexing**: Tables are sorted by position (top-to-bottom, then left-to-right)
-- **Precise Highlighting**: Highlight phrases only within specified tables
-- **Visual Feedback**: Shows table positions and indices for easy targeting
+- **Dual Highlighting Methods**: Choose between standard text search or OCR-based highlighting
+- **Simple Interface**: Same function signature for both methods
+- **OCR Fuzzy Matching**: Handles OCR errors with intelligent text matching
+- **Flexible Input**: Works with both searchable and scanned PDFs
 
-## How It Works
+## Highlighting Methods
 
-1. **Extract Tables**: The system scans your PDF and identifies all tables with their positions
-2. **Index by Position**: Tables are numbered starting from 0 (top-left table = index 0)
-3. **Target & Highlight**: Specify which table to search in and highlight your phrase
+### Method 1: Standard Text Search
+Best for searchable PDFs with selectable text.
 
-## Quick Start
-
-### 1. Extract Tables from PDF
 ```python
-from src.table_extractor import extract_tables_from_pdf
+from src.highlighters.row_highlighter import highlight_sentences_on_page
 from src.config import CFG
 
-extract_tables_from_pdf("your_document.pdf", CFG.tables_dir)
-```
+sentences_to_highlight = [
+    "Financial statements",
+    "Total revenue"
+]
 
-### 2. View Available Tables
-```python
-from src.highlighters.row_highlighter import get_table_info_for_page
-
-# See all tables on page 17
-get_table_info_for_page(CFG.tables_dir, page_number=17)
-```
-
-Output:
-```
-Found 2 table(s) on page 17:
-  Table 0: Top=676.1, Left=24.6 (BOTTOMLEFT)
-  Table 1: Top=540.7, Left=24.3 (BOTTOMLEFT)
-```
-
-### 3. Highlight Phrase in Specific Table
-```python
-from src.highlighters.row_highlighter import highlight_phrase_in_table
-
-highlight_phrase_in_table(
-    pdf_path="your_document.pdf",
-    output_path="highlighted_document.pdf", 
+highlight_sentences_on_page(
+    pdf_path="document.pdf",
+    output_path="highlighted.pdf",
     page_number=17,
-    phrase="Financial statements",
-    table_index=0,  # Target the first (top) table
-    tables_json_path=CFG.tables_dir
+    sentences=sentences_to_highlight
 )
 ```
 
-## Table Indexing System
+### Method 2: OCR-Based Highlighting
+Best for scanned PDFs or images where text is not selectable.
 
-Tables are automatically indexed by their visual position:
+```python
+from src.ocr_highlighter.ocr_highlighter import highlight_sentences_with_ocr
+from src.config import CFG
 
-- **Page 17 with 2 tables**:
-  - `table_index=0` → Top table
-  - `table_index=1` → Bottom table
+sentences_to_highlight = [
+    "Financial statements",
+    "Total revenue"
+]
 
-- **Page 20 with 2 side-by-side tables**:
-  - `table_index=0` → Left table
-  - `table_index=1` → Right table
+highlight_sentences_with_ocr(
+    pdf_path="scanned_document.pdf",
+    output_path="highlighted_ocr.pdf",
+    page_number=17,
+    sentences=sentences_to_highlight
+)
+```
+
+## Quick Start
+
+### Standard Highlighting (Searchable PDFs)
+```python
+from src.highlighters.row_highlighter import highlight_sentences_on_page
+from src.config import CFG
+
+highlight_sentences_on_page(
+    "/path/to/document.pdf", 
+    CFG.row_highlighter_pdf_path,
+    page_number=17,
+    sentences=["Text to highlight"]
+)
+```
+
+### OCR Highlighting (Scanned PDFs)
+```python
+from src.ocr_highlighter.ocr_highlighter import highlight_sentences_with_ocr
+from src.config import CFG
+
+highlight_sentences_with_ocr(
+    "/path/to/document.pdf",
+    CFG.root.joinpath("highlighted_ocr.pdf"),
+    page_number=17,
+    sentences=["Text to highlight"]
+)
+```
 
 ## Project Structure
 
 ```
 src/
-├── table_extractor.py      # Extract and sort tables from PDF
 ├── highlighters/
-│   └── row_highlighter.py  # Highlight phrases in specific tables
-├── config.py              # Configuration settings
-└── testing.py             # Example usage
+│   └── row_highlighter.py     # Standard text search highlighting
+├── ocr_highlighter/
+│   └── ocr_highlighter.py     # OCR-based highlighting
+├── config.py                  # Configuration settings
+├── testing.py                 # Standard highlighter testing
+├── ocr_testing.py             # OCR highlighter testing
+└── table_extractor.py         # Table extraction utilities
 ```
 
-## Configuration
+## OCR Features
 
-Update `src/config.py` with your file paths:
-```python
-class CFG:
-    tables_dir = "tables.json"
-    row_highlighter_pdf_path = "highlighted_output.pdf"
-```
+The OCR highlighter includes:
+- **Fuzzy Matching**: Handles OCR recognition errors
+- **Word Sequence Matching**: Finds partial sentence matches
+- **Confidence Filtering**: Only uses high-confidence OCR results
+- **Bounding Box Creation**: Creates precise highlight regions
 
 ## Use Cases
 
-- **Financial Reports**: Highlight specific values in income statements vs balance sheets
-- **Research Papers**: Target data in specific tables when multiple tables exist
-- **Legal Documents**: Highlight clauses in specific contract sections
-- **Academic Papers**: Focus on results in particular data tables
+### Standard Highlighter
+- **Digital PDFs**: Documents with selectable text
+- **Reports**: Well-formatted business documents
+- **Articles**: Text-based publications
+
+### OCR Highlighter  
+- **Scanned Documents**: Image-based PDFs
+- **Old Documents**: Legacy files without searchable text
+- **Photos**: Screenshots or photos of documents
+- **Mixed Content**: PDFs with both text and image elements
 
 ## Requirements
 
 - Python 3.7+
-- PyMuPDF (fitz)
-- docling
+- PyMuPDF
+- pytesseract
+- Pillow
 
 ## Installation
 
 ```bash
-pip install pymupdf docling
+pip install -r requirements.txt
+```
+
+## Testing
+
+Test standard highlighting:
+```bash
+python src/testing.py
+```
+
+Test OCR highlighting:
+```bash
+python src/ocr_testing.py
 ```
 
 ---
 
-*This tool ensures you highlight the right information in the right table, every time.*
+*Choose the right highlighting method for your document type.*
