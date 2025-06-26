@@ -1,17 +1,19 @@
 from src.ocr_highlighter.ocr_highlighter import highlight_sentences_with_ocr
 from src.config import CFG
 
-_pdf_path = "/Users/eduard_babayan/Documents/context_highlighter/Document.pdf"
+_pdf_path = "/Users/eduard_babayan/Documents/epam_projects/context_highlighter/Document.pdf"
 
 sentences_to_highlight = [
-    "WINSLOW MS LGCP GRTH",
+    "Benefit Payments",
 ]
 
-target_page = 22
+target_page = 4
 
 highlight_sentences_with_ocr(
     _pdf_path, 
     CFG.row_highlighter_pdf_path,
     target_page,
-    sentences_to_highlight
+    sentences_to_highlight,
+    table=True,
+    table_index=0
 )

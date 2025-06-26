@@ -1,12 +1,19 @@
 import re
+import json
 import difflib
+import tempfile
+from pathlib import Path
 
 import fitz  # PyMuPDF
 import pytesseract
 from PIL import Image
+from loguru import logger
+
+from src.config import CFG
+from src.ocr_highlighter.table_extractor import extract_tables_from_pdf
 
 
-def highlight_sentences_with_ocr(pdf_path, output_path, page_number, sentences):
+def highlight_sentences_with_ocr(pdf_path, output_path, page_number, sentences, table=False, table_index=0):
     """
     Highlight multiple sentences on a specific page using OCR to find text locations.
     
@@ -15,11 +22,15 @@ def highlight_sentences_with_ocr(pdf_path, output_path, page_number, sentences):
         output_path: Path to save the highlighted PDF
         page_number: Page number (1-indexed)
         sentences: List of sentences to highlight
+        table: Boolean flag to enable table-based filtering
+        table_index: Index of the table to filter by (0-indexed)
     """
     pdf = fitz.open(pdf_path)
-    
+
+    CFG.temp_dir.mkdir(parents=True, exist_ok=True)
+
     if page_number < 1 or page_number > len(pdf):
-        print(f"Invalid page number {page_number}")
+        logger.error(f"Invalid page number {page_number}")
         pdf.close()
         return
     
@@ -36,11 +47,31 @@ def highlight_sentences_with_ocr(pdf_path, output_path, page_number, sentences):
     # Scale factor to convert from image coordinates back to PDF coordinates
     scale_factor = 0.5  # Since we scaled up by 2x for OCR
     
+    # Extract tables if table filtering is enabled
+    table_bbox = None
+    if table:
+        # Extract the specific page and save as new PDF to CFG's temp path
+        temp_pdf = fitz.open()
+        temp_pdf.insert_pdf(pdf, from_page=page_number-1, to_page=page_number-1)
+        temp_pdf.save(CFG.temp_pdf_path)
+        temp_pdf.close()
+        
+        # Extract tables from the single-page PDF
+        with tempfile.NamedTemporaryFile(mode='w', suffix='.json', delete=False) as tmp_file:
+            extract_tables_from_pdf(CFG.temp_pdf_path, Path(tmp_file.name))
+            
+        with open(tmp_file.name, 'r') as f:
+            tables_data = json.load(f)
+            
+        if tables_data and table_index < len(tables_data):
+            selected_table = tables_data[table_index]
+            table_bbox = selected_table['bbox']
+    
     highlighted_count = 0
     
     for sentence in sentences:
         # Find sentence in OCR text using fuzzy matching
-        found_boxes = _find_sentence_boxes(sentence, ocr_data, scale_factor)
+        found_boxes = _find_sentence_boxes(sentence, ocr_data, scale_factor, table_bbox)
         
         for box in found_boxes:
             # Convert box coordinates to PyMuPDF quad
@@ -55,10 +86,10 @@ def highlight_sentences_with_ocr(pdf_path, output_path, page_number, sentences):
     
     pdf.save(output_path)
     pdf.close()
-    print(f"Highlighted text regions using OCR on page {page_number}, saved to {output_path}")
+    logger.success(f"Highlighted text regions using OCR on page {page_number}, saved to {output_path}")
 
 
-def _find_sentence_boxes(sentence, ocr_data, scale_factor):
+def _find_sentence_boxes(sentence, ocr_data, scale_factor, table_bbox=None):
     """
     Find bounding boxes for a sentence in OCR data using fuzzy matching.
     
@@ -66,6 +97,7 @@ def _find_sentence_boxes(sentence, ocr_data, scale_factor):
         sentence: The sentence to find
         ocr_data: OCR data from pytesseract
         scale_factor: Scale factor to convert image coords to PDF coords
+        table_bbox: Optional table bounding box to filter words within
         
     Returns:
         List of bounding boxes as [left, top, right, bottom]
@@ -85,12 +117,27 @@ def _find_sentence_boxes(sentence, ocr_data, scale_factor):
         if int(ocr_data['conf'][i]) > 30:  # Confidence threshold
             word = ocr_data['text'][i].strip()
             if word:
+                left = ocr_data['left'][i] * scale_factor
+                top = ocr_data['top'][i] * scale_factor
+                width = ocr_data['width'][i] * scale_factor
+                height = ocr_data['height'][i] * scale_factor
+                
+                # Filter by table bbox if provided
+                if table_bbox is not None:
+                    word_right = left + width
+                    word_bottom = top + height
+                    
+                    # Check if word is within table bounds
+                    if not (left >= table_bbox['l'] and top >= table_bbox['t'] and 
+                           word_right <= table_bbox['r'] and word_bottom <= table_bbox['b']):
+                        continue
+                
                 text_blocks.append({
                     'word': word.lower(),
-                    'left': ocr_data['left'][i] * scale_factor,
-                    'top': ocr_data['top'][i] * scale_factor,
-                    'width': ocr_data['width'][i] * scale_factor,
-                    'height': ocr_data['height'][i] * scale_factor
+                    'left': left,
+                    'top': top,
+                    'width': width,
+                    'height': height
                 })
     
     # Find sequences of words that match the sentence
