@@ -1,0 +1,2076 @@
+[
+  {
+    "id": 1,
+    "annotations": [
+      {
+        "id": 3,
+        "completed_by": 1,
+        "result": [
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 23.453838941602044,
+              "y": 48.050416918526494,
+              "width": 36.042712430602734,
+              "height": 1.7406991798870592,
+              "rotation": 0
+            },
+            "id": "_e8Usgrbks",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 23.453838941602044,
+              "y": 48.050416918526494,
+              "width": 36.042712430602734,
+              "height": 1.7406991798870592,
+              "rotation": 0,
+              "text": [
+                "Federal Employee and Veteran Benefits Payable"
+              ]
+            },
+            "id": "_e8Usgrbks",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 66.43477351509576,
+              "y": 48.050416918526494,
+              "width": 5.856940769972937,
+              "height": 1.74069917988706,
+              "rotation": 0
+            },
+            "id": "b5kadCLJOu",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 66.43477351509576,
+              "y": 48.050416918526494,
+              "width": 5.856940769972937,
+              "height": 1.74069917988706,
+              "rotation": 0,
+              "text": [
+                "1,515.5"
+              ]
+            },
+            "id": "b5kadCLJOu",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2025-06-28T11:40:07.954237Z",
+        "updated_at": "2025-06-28T11:40:07.954248Z",
+        "draft_created_at": "2025-06-28T11:39:02.894467Z",
+        "lead_time": 97.093,
+        "prediction": {},
+        "result_count": 2,
+        "unique_id": "35f61e18-4769-4248-8570-788a8c3ed9aa",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 1,
+        "project": 4,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "393d684a-page_25.png",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "ocr": "\/data\/upload\/4\/393d684a-page_25.png"
+    },
+    "meta": {},
+    "created_at": "2025-06-28T11:38:29.555132Z",
+    "updated_at": "2025-06-28T11:40:07.964645Z",
+    "inner_id": 1,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 4,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 2,
+    "annotations": [
+      {
+        "id": 4,
+        "completed_by": 1,
+        "result": [
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 10.392861024562382,
+              "y": 40.88569909411133,
+              "width": 22.79701561235623,
+              "height": 1.3786337504705557,
+              "rotation": 0
+            },
+            "id": "j_avNo-HEJ",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 10.392861024562382,
+              "y": 40.88569909411133,
+              "width": 22.79701561235623,
+              "height": 1.3786337504705557,
+              "rotation": 0,
+              "text": [
+                "Cash & Other Monetary Assets"
+              ]
+            },
+            "id": "j_avNo-HEJ",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 67.68275243300542,
+              "y": 40.88569909411133,
+              "width": 5.3523427959444945,
+              "height": 1.3786337504705557,
+              "rotation": 0
+            },
+            "id": "gBoDSjMIHm",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 67.68275243300542,
+              "y": 40.88569909411133,
+              "width": 5.3523427959444945,
+              "height": 1.3786337504705557,
+              "rotation": 0,
+              "text": [
+                "877.8"
+              ]
+            },
+            "id": "gBoDSjMIHm",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2025-06-28T11:41:46.772664Z",
+        "updated_at": "2025-06-28T11:41:46.772685Z",
+        "draft_created_at": "2025-06-28T11:41:16.914412Z",
+        "lead_time": 47.635,
+        "prediction": {},
+        "result_count": 2,
+        "unique_id": "09ebd187-ab75-4210-ad3e-7b135cac877a",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 2,
+        "project": 4,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "780b500e-page_21.png",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "ocr": "\/data\/upload\/4\/780b500e-page_21.png"
+    },
+    "meta": {},
+    "created_at": "2025-06-28T11:40:57.011282Z",
+    "updated_at": "2025-06-28T11:41:46.789676Z",
+    "inner_id": 2,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 4,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 3,
+    "annotations": [
+      {
+        "id": 5,
+        "completed_by": 1,
+        "result": [
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 16.33990857561183,
+              "y": 29.167312215111608,
+              "width": 11.695860183730511,
+              "height": 1.531815278300616,
+              "rotation": 0
+            },
+            "id": "mFymu5elNT",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 16.33990857561183,
+              "y": 29.167312215111608,
+              "width": 11.695860183730511,
+              "height": 1.531815278300616,
+              "rotation": 0,
+              "text": [
+                "Budget Deficit"
+              ]
+            },
+            "id": "mFymu5elNT",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 65.50216833095396,
+              "y": 29.167312215111618,
+              "width": 7.830279275548435,
+              "height": 1.5318152783006198,
+              "rotation": 0
+            },
+            "id": "xaRjetgVgD",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 65.50216833095396,
+              "y": 29.167312215111618,
+              "width": 7.830279275548435,
+              "height": 1.5318152783006198,
+              "rotation": 0,
+              "text": [
+                "(1,695.2)"
+              ]
+            },
+            "id": "xaRjetgVgD",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2025-06-28T11:43:06.471383Z",
+        "updated_at": "2025-06-28T11:43:06.471393Z",
+        "draft_created_at": "2025-06-28T11:42:43.177882Z",
+        "lead_time": 48.661,
+        "prediction": {},
+        "result_count": 2,
+        "unique_id": "ae8ffa1c-b41b-4da5-982d-6b15ae50acec",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 3,
+        "project": 4,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "6b471c4d-page_8.png",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "ocr": "\/data\/upload\/4\/6b471c4d-page_8.png"
+    },
+    "meta": {},
+    "created_at": "2025-06-28T11:42:16.386440Z",
+    "updated_at": "2025-06-28T11:43:06.482354Z",
+    "inner_id": 3,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 4,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 4,
+    "annotations": [
+      {
+        "id": 6,
+        "completed_by": 1,
+        "result": [
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 16.736378412348458,
+              "y": 20.562590455942026,
+              "width": 5.253225336760283,
+              "height": 1.4552245143855413,
+              "rotation": 0
+            },
+            "id": "Uw65zibIkh",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 16.736378412348458,
+              "y": 20.562590455942026,
+              "width": 5.253225336760283,
+              "height": 1.4552245143855413,
+              "rotation": 0,
+              "text": [
+                "Other"
+              ]
+            },
+            "id": "Uw65zibIkh",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 52.41866371864504,
+              "y": 20.562590455942004,
+              "width": 5.9470475510494705,
+              "height": 1.3786337504705748,
+              "rotation": 0
+            },
+            "id": "lHdOcrHxr9",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 52.41866371864504,
+              "y": 20.562590455942004,
+              "width": 5.9470475510494705,
+              "height": 1.3786337504705748,
+              "rotation": 0,
+              "text": [
+                "1,143.8"
+              ]
+            },
+            "id": "lHdOcrHxr9",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2025-06-28T11:49:07.747077Z",
+        "updated_at": "2025-06-28T11:49:07.747097Z",
+        "draft_created_at": "2025-06-28T11:48:40.647389Z",
+        "lead_time": 48.933,
+        "prediction": {},
+        "result_count": 2,
+        "unique_id": "2d144342-90c8-48f4-ba00-2aa657ba53ad",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 4,
+        "project": 4,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "dd35190b-page_29.png",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "ocr": "\/data\/upload\/4\/dd35190b-page_29.png"
+    },
+    "meta": {},
+    "created_at": "2025-06-28T11:48:17.189331Z",
+    "updated_at": "2025-06-28T11:49:07.765075Z",
+    "inner_id": 4,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 4,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 5,
+    "annotations": [
+      {
+        "id": 7,
+        "completed_by": 1,
+        "result": [
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 42.214521295636146,
+              "y": 25.988795512637836,
+              "width": 10.684862100052179,
+              "height": 1.0109980836784054,
+              "rotation": 0
+            },
+            "id": "2Gt4AqNAD1",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 42.214521295636146,
+              "y": 25.988795512637836,
+              "width": 10.684862100052179,
+              "height": 1.0109980836784054,
+              "rotation": 0,
+              "text": [
+                "Real GDP Growth"
+              ]
+            },
+            "id": "2Gt4AqNAD1",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 77.75804215907502,
+              "y": 26.494294554477037,
+              "width": 3.925051383691928,
+              "height": 1.3479974449043135,
+              "rotation": 0
+            },
+            "id": "spFQB2oY2h",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 77.75804215907502,
+              "y": 26.494294554477037,
+              "width": 3.925051383691928,
+              "height": 1.3479974449043135,
+              "rotation": 0,
+              "text": [
+                "2.9%"
+              ]
+            },
+            "id": "spFQB2oY2h",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2025-06-28T11:50:05.636140Z",
+        "updated_at": "2025-06-28T11:50:05.636152Z",
+        "draft_created_at": "2025-06-28T11:49:46.384944Z",
+        "lead_time": 33.089,
+        "prediction": {},
+        "result_count": 2,
+        "unique_id": "c8ae67df-217a-4687-8b72-11aca99e54eb",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 5,
+        "project": 4,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "1862cc5a-page_33.png",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "ocr": "\/data\/upload\/4\/1862cc5a-page_33.png"
+    },
+    "meta": {},
+    "created_at": "2025-06-28T11:49:30.833905Z",
+    "updated_at": "2025-06-28T11:50:05.646348Z",
+    "inner_id": 5,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 4,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 6,
+    "annotations": [
+      {
+        "id": 8,
+        "completed_by": 1,
+        "result": [
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 38.145749596126485,
+              "y": 16.926558825221807,
+              "width": 14.074679204150364,
+              "height": 1.8381783339607374,
+              "rotation": 0
+            },
+            "id": "P9tr9105E3",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 38.145749596126485,
+              "y": 16.926558825221807,
+              "width": 14.074679204150364,
+              "height": 1.8381783339607374,
+              "rotation": 0,
+              "text": [
+                "Valuation Period"
+              ]
+            },
+            "id": "P9tr9105E3",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 78.4865554840786,
+              "y": 16.926558825221807,
+              "width": 4.559403122471238,
+              "height": 1.8381783339607374,
+              "rotation": 0
+            },
+            "id": "H1qHAqCVpL",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 78.4865554840786,
+              "y": 16.926558825221807,
+              "width": 4.559403122471238,
+              "height": 1.8381783339607374,
+              "rotation": 0,
+              "text": [
+                "(2.0)"
+              ]
+            },
+            "id": "H1qHAqCVpL",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2025-06-28T11:51:11.127596Z",
+        "updated_at": "2025-06-28T11:51:11.127620Z",
+        "draft_created_at": "2025-06-28T11:50:59.329801Z",
+        "lead_time": 25.313,
+        "prediction": {},
+        "result_count": 2,
+        "unique_id": "a4878f8a-2745-420b-9cd8-15e22464194c",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 6,
+        "project": 4,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "67579a47-page_40.png",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "ocr": "\/data\/upload\/4\/67579a47-page_40.png"
+    },
+    "meta": {},
+    "created_at": "2025-06-28T11:50:44.192665Z",
+    "updated_at": "2025-06-28T11:51:11.146755Z",
+    "inner_id": 6,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 4,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 7,
+    "annotations": [
+      {
+        "id": 9,
+        "completed_by": 1,
+        "result": [
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 8.806981677615862,
+              "y": 45.94068951250337,
+              "width": 20.81466642867308,
+              "height": 1.2254522226404916,
+              "rotation": 0
+            },
+            "id": "SquOCNdCS0",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 8.806981677615862,
+              "y": 45.94068951250337,
+              "width": 20.81466642867308,
+              "height": 1.2254522226404916,
+              "rotation": 0,
+              "text": [
+                "Small Business Administration"
+              ]
+            },
+            "id": "SquOCNdCS0",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 50.2380796165937,
+              "y": 45.94068951250337,
+              "width": 3.865580908182153,
+              "height": 1.2254522226404916,
+              "rotation": 0
+            },
+            "id": "8U2Af8RJ0W",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 50.2380796165937,
+              "y": 45.94068951250337,
+              "width": 3.865580908182153,
+              "height": 1.2254522226404916,
+              "rotation": 0,
+              "text": [
+                "35.5"
+              ]
+            },
+            "id": "8U2Af8RJ0W",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2025-06-28T11:52:19.081551Z",
+        "updated_at": "2025-06-28T11:52:19.081569Z",
+        "draft_created_at": "2025-06-28T11:52:03.519499Z",
+        "lead_time": 31.261,
+        "prediction": {},
+        "result_count": 2,
+        "unique_id": "3c8eae13-ceda-4dc8-b9e9-a1b4ce36b733",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 7,
+        "project": 4,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "3d9bbd28-page_64.png",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "ocr": "\/data\/upload\/4\/3d9bbd28-page_64.png"
+    },
+    "meta": {},
+    "created_at": "2025-06-28T11:51:46.221183Z",
+    "updated_at": "2025-06-28T11:52:19.098598Z",
+    "inner_id": 7,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 4,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 8,
+    "annotations": [
+      {
+        "id": 10,
+        "completed_by": 1,
+        "result": [
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 9.401686432720807,
+              "y": 42.87705895590213,
+              "width": 10.308215755152377,
+              "height": 1.5318152783006198,
+              "rotation": 0
+            },
+            "id": "RmgDWL8ePZ",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 9.401686432720807,
+              "y": 42.87705895590213,
+              "width": 10.308215755152377,
+              "height": 1.5318152783006198,
+              "rotation": 0,
+              "text": [
+                "Total revenue"
+              ]
+            },
+            "id": "RmgDWL8ePZ",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 51.92307642272437,
+              "y": 42.87705895590213,
+              "width": 5.64969517349698,
+              "height": 1.3020429865555272,
+              "rotation": 0
+            },
+            "id": "vfXZAm0ku9",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 51.92307642272437,
+              "y": 42.87705895590213,
+              "width": 5.64969517349698,
+              "height": 1.3020429865555272,
+              "rotation": 0,
+              "text": [
+                "2,740.5"
+              ]
+            },
+            "id": "vfXZAm0ku9",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2025-06-28T11:53:02.365230Z",
+        "updated_at": "2025-06-28T11:53:02.365250Z",
+        "draft_created_at": "2025-06-28T11:52:50.108238Z",
+        "lead_time": 25.059,
+        "prediction": {},
+        "result_count": 2,
+        "unique_id": "2c0180ff-1f59-41fc-a5c2-adc38fb2607c",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 8,
+        "project": 4,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "3c918bb0-page_66.png",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "ocr": "\/data\/upload\/4\/3c918bb0-page_66.png"
+    },
+    "meta": {},
+    "created_at": "2025-06-28T11:52:35.810388Z",
+    "updated_at": "2025-06-28T11:53:02.382726Z",
+    "inner_id": 8,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 4,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 9,
+    "annotations": [
+      {
+        "id": 11,
+        "completed_by": 1,
+        "result": [
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 9.699038810273278,
+              "y": 79.8566290903469,
+              "width": 32.11405677566703,
+              "height": 1.3786337504705415,
+              "rotation": 0
+            },
+            "id": "a0SAlxKkvR",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 9.699038810273278,
+              "y": 79.8566290903469,
+              "width": 32.11405677566703,
+              "height": 1.3786337504705415,
+              "rotation": 0,
+              "text": [
+                "Ending cash and other monetary assets balance"
+              ]
+            },
+            "id": "a0SAlxKkvR",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 76.00861900447464,
+              "y": 79.8566290903469,
+              "width": 4.559403122471252,
+              "height": 1.2254522226404845,
+              "rotation": 0
+            },
+            "id": "x7K0VpMQBa",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 76.00861900447464,
+              "y": 79.8566290903469,
+              "width": 4.559403122471252,
+              "height": 1.2254522226404845,
+              "rotation": 0,
+              "text": [
+                "922.2"
+              ]
+            },
+            "id": "x7K0VpMQBa",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2025-06-28T11:53:57.578066Z",
+        "updated_at": "2025-06-28T11:53:57.578079Z",
+        "draft_created_at": "2025-06-28T11:53:51.180257Z",
+        "lead_time": 28.29,
+        "prediction": {},
+        "result_count": 2,
+        "unique_id": "6109ede1-f774-493d-9d41-356754c98a2a",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 9,
+        "project": 4,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "f8778550-page_69.png",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "ocr": "\/data\/upload\/4\/f8778550-page_69.png"
+    },
+    "meta": {},
+    "created_at": "2025-06-28T11:53:27.749740Z",
+    "updated_at": "2025-06-28T11:53:57.596528Z",
+    "inner_id": 9,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 4,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 10,
+    "annotations": [
+      {
+        "id": 12,
+        "completed_by": 1,
+        "result": [
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 10.987565779667321,
+              "y": 22.503915754503932,
+              "width": 18.931434704174073,
+              "height": 1.1488614587254506,
+              "rotation": 0
+            },
+            "id": "6i7Bn0GYrM",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 10.987565779667321,
+              "y": 22.503915754503932,
+              "width": 18.931434704174073,
+              "height": 1.1488614587254506,
+              "rotation": 0,
+              "text": [
+                "Social Security payroll taxes"
+              ]
+            },
+            "id": "6i7Bn0GYrM",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 87.90271410657354,
+              "y": 22.274143462758847,
+              "width": 3.3699936122613536,
+              "height": 1.4552245143855842,
+              "rotation": 0
+            },
+            "id": "wlaQGr6mzJ",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 87.90271410657354,
+              "y": 22.274143462758847,
+              "width": 3.3699936122613536,
+              "height": 1.4552245143855842,
+              "rotation": 0,
+              "text": [
+                "0.1"
+              ]
+            },
+            "id": "wlaQGr6mzJ",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2025-06-28T11:54:55.460369Z",
+        "updated_at": "2025-06-28T11:54:55.460387Z",
+        "draft_created_at": "2025-06-28T11:54:44.894151Z",
+        "lead_time": 31.991,
+        "prediction": {},
+        "result_count": 2,
+        "unique_id": "f607cf1b-e66d-4117-abcb-813738089c10",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 10,
+        "project": 4,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "9227993b-page_71.png",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "ocr": "\/data\/upload\/4\/9227993b-page_71.png"
+    },
+    "meta": {},
+    "created_at": "2025-06-28T11:54:21.559147Z",
+    "updated_at": "2025-06-28T11:54:55.471493Z",
+    "inner_id": 10,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 4,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 11,
+    "annotations": [
+      {
+        "id": 13,
+        "completed_by": 1,
+        "result": [
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 9.069642944453872,
+              "y": 30.8752862504168,
+              "width": 22.24195784092494,
+              "height": 1.179497764291476,
+              "rotation": 0
+            },
+            "id": "Gv60w29x69",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 9.069642944453872,
+              "y": 30.8752862504168,
+              "width": 22.24195784092494,
+              "height": 1.179497764291476,
+              "rotation": 0,
+              "text": [
+                "Disaster Assistance Loans - SBA"
+              ]
+            },
+            "id": "Gv60w29x69",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 76.23163328763899,
+              "y": 30.95953609072334,
+              "width": 4.470197409205511,
+              "height": 1.1794977642914688,
+              "rotation": 0
+            },
+            "id": "443wahwzrL",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 76.23163328763899,
+              "y": 30.95953609072334,
+              "width": 4.470197409205511,
+              "height": 1.1794977642914688,
+              "rotation": 0,
+              "text": [
+                "270.7"
+              ]
+            },
+            "id": "443wahwzrL",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2025-06-28T11:57:37.552692Z",
+        "updated_at": "2025-06-28T11:57:37.552710Z",
+        "draft_created_at": "2025-06-28T11:55:43.477912Z",
+        "lead_time": 130.238,
+        "prediction": {},
+        "result_count": 2,
+        "unique_id": "2e1228af-bb4f-4681-8335-e138d9b4f993",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 11,
+        "project": 4,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "454ead03-page_91.png",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "ocr": "\/data\/upload\/4\/454ead03-page_91.png"
+    },
+    "meta": {},
+    "created_at": "2025-06-28T11:55:23.926522Z",
+    "updated_at": "2025-06-28T11:57:37.567929Z",
+    "inner_id": 11,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 4,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 12,
+    "annotations": [
+      {
+        "id": 14,
+        "completed_by": 1,
+        "result": [
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 9.104334055168334,
+              "y": 41.651606733261644,
+              "width": 24.283777500118585,
+              "height": 1.5318152783006127,
+              "rotation": 0
+            },
+            "id": "VVk0i82TbP",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 9.104334055168334,
+              "y": 41.651606733261644,
+              "width": 24.283777500118585,
+              "height": 1.5318152783006127,
+              "rotation": 0,
+              "text": [
+                "Veterans Housing Benefit Programs"
+              ]
+            },
+            "id": "VVk0i82TbP",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 44.39014952472841,
+              "y": 41.72819749717667,
+              "width": 3.2708761530771966,
+              "height": 1.30204298655552,
+              "rotation": 0
+            },
+            "id": "NlfVB5tDCv",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 44.39014952472841,
+              "y": 41.72819749717667,
+              "width": 3.2708761530771966,
+              "height": 1.30204298655552,
+              "rotation": 0,
+              "text": [
+                "9.9"
+              ]
+            },
+            "id": "NlfVB5tDCv",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2025-06-28T14:52:20.491196Z",
+        "updated_at": "2025-06-28T14:52:20.491210Z",
+        "draft_created_at": "2025-06-28T14:52:15.061928Z",
+        "lead_time": 19.026,
+        "prediction": {},
+        "result_count": 2,
+        "unique_id": "c72adfec-96a9-4c33-baca-adb0be95d0a2",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 12,
+        "project": 4,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "cba69da4-page_93.png",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "ocr": "\/data\/upload\/4\/cba69da4-page_93.png"
+    },
+    "meta": {},
+    "created_at": "2025-06-28T14:51:55.402520Z",
+    "updated_at": "2025-06-28T14:52:20.503880Z",
+    "inner_id": 12,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 4,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 13,
+    "annotations": [
+      {
+        "id": 15,
+        "completed_by": 1,
+        "result": [
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 9.069642944453872,
+              "y": 25.736045991718235,
+              "width": 40.122747477746955,
+              "height": 1.6849968061306733,
+              "rotation": 0
+            },
+            "id": "ueb-FHWmEN",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 9.069642944453872,
+              "y": 25.736045991718235,
+              "width": 40.122747477746955,
+              "height": 1.6849968061306733,
+              "rotation": 0,
+              "text": [
+                "Inventory and operating material and supplies held for repair"
+              ]
+            },
+            "id": "ueb-FHWmEN",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 75.46842885192098,
+              "y": 25.736045991718235,
+              "width": 4.034080588795206,
+              "height": 1.3479974449045393,
+              "rotation": 0
+            },
+            "id": "_5lo5wtc2S",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 75.46842885192098,
+              "y": 25.736045991718235,
+              "width": 4.034080588795206,
+              "height": 1.3479974449045393,
+              "rotation": 0,
+              "text": [
+                "77.8"
+              ]
+            },
+            "id": "_5lo5wtc2S",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2025-06-28T14:53:13.811730Z",
+        "updated_at": "2025-06-28T14:53:13.811755Z",
+        "draft_created_at": "2025-06-28T14:53:07.455566Z",
+        "lead_time": 24.33,
+        "prediction": {},
+        "result_count": 2,
+        "unique_id": "e72443fe-4629-443f-8052-8cb60195d3fd",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 13,
+        "project": 4,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "e7b25fcb-page_95.png",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "ocr": "\/data\/upload\/4\/e7b25fcb-page_95.png"
+    },
+    "meta": {},
+    "created_at": "2025-06-28T14:52:45.416527Z",
+    "updated_at": "2025-06-28T14:53:13.828587Z",
+    "inner_id": 13,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 4,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 14,
+    "annotations": [
+      {
+        "id": 16,
+        "completed_by": 1,
+        "result": [
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 9.954366425864942,
+              "y": 20.759160651529957,
+              "width": 24.825950001855944,
+              "height": 1.3901223650578096,
+              "rotation": 0
+            },
+            "id": "9v9rRwY_Iz",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 9.954366425864942,
+              "y": 20.759160651529957,
+              "width": 24.825950001855944,
+              "height": 1.3901223650578096,
+              "rotation": 0,
+              "text": [
+                "International fixed maturity securities"
+              ]
+            },
+            "id": "9v9rRwY_Iz",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 62.24477319305909,
+              "y": 20.759160651529953,
+              "width": 3.4780316427721245,
+              "height": 1.2047727163834272,
+              "rotation": 0
+            },
+            "id": "crgN6pNpyh",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 62.24477319305909,
+              "y": 20.759160651529953,
+              "width": 3.4780316427721245,
+              "height": 1.2047727163834272,
+              "rotation": 0,
+              "text": [
+                "5.8"
+              ]
+            },
+            "id": "crgN6pNpyh",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2025-06-28T14:54:33.874920Z",
+        "updated_at": "2025-06-28T14:54:33.874938Z",
+        "draft_created_at": "2025-06-28T14:54:23.355551Z",
+        "lead_time": 31.093,
+        "prediction": {},
+        "result_count": 2,
+        "unique_id": "3b35e701-66d2-4a8c-b885-3053de51ac93",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 14,
+        "project": 4,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "69d89042-page_99.png",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "ocr": "\/data\/upload\/4\/69d89042-page_99.png"
+    },
+    "meta": {},
+    "created_at": "2025-06-28T14:54:00.873752Z",
+    "updated_at": "2025-06-28T14:54:33.893272Z",
+    "inner_id": 14,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 4,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 15,
+    "annotations": [
+      {
+        "id": 17,
+        "completed_by": 1,
+        "result": [
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 10.268964200582179,
+              "y": 32.22328369532134,
+              "width": 27.802447301156175,
+              "height": 1.5164971255176098,
+              "rotation": 0
+            },
+            "id": "tbLtV4utOk",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 10.268964200582179,
+              "y": 32.22328369532134,
+              "width": 27.802447301156175,
+              "height": 1.5164971255176098,
+              "rotation": 0,
+              "text": [
+                "Actuarial (gains)\/losses (from experience)"
+              ]
+            },
+            "id": "tbLtV4utOk",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 52.463266575278034,
+              "y": 32.307533535627876,
+              "width": 4.797285024513222,
+              "height": 1.3479974449045429,
+              "rotation": 0
+            },
+            "id": "oaiBD7nfmk",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 52.463266575278034,
+              "y": 32.307533535627876,
+              "width": 4.797285024513222,
+              "height": 1.3479974449045429,
+              "rotation": 0,
+              "text": [
+                "144.6"
+              ]
+            },
+            "id": "oaiBD7nfmk",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2025-06-28T14:55:42.394040Z",
+        "updated_at": "2025-06-28T14:55:42.394053Z",
+        "draft_created_at": "2025-06-28T14:55:35.306986Z",
+        "lead_time": 24.507,
+        "prediction": {},
+        "result_count": 2,
+        "unique_id": "1c3cf0de-9c5b-4ef7-bcfe-48e5027015b9",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 15,
+        "project": 4,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "972a361e-page_116.png",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "ocr": "\/data\/upload\/4\/972a361e-page_116.png"
+    },
+    "meta": {},
+    "created_at": "2025-06-28T14:55:15.957266Z",
+    "updated_at": "2025-06-28T14:55:42.406656Z",
+    "inner_id": 15,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 4,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 16,
+    "annotations": [
+      {
+        "id": 18,
+        "completed_by": 1,
+        "result": [
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 35.618254386930474,
+              "y": 62.67229002957782,
+              "width": 4.23501871059581,
+              "height": 1.1140474751277267,
+              "rotation": 0
+            },
+            "id": "2Y7vQACLSi",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 35.618254386930474,
+              "y": 62.67229002957782,
+              "width": 4.23501871059581,
+              "height": 1.1140474751277267,
+              "rotation": 0,
+              "text": [
+                "2025"
+              ]
+            },
+            "id": "2Y7vQACLSi",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 47.602456270105876,
+              "y": 62.67229002957782,
+              "width": 4.865766178131366,
+              "height": 1.2533034095186864,
+              "rotation": 0
+            },
+            "id": "7s4eXwlffX",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 47.602456270105876,
+              "y": 62.67229002957782,
+              "width": 4.865766178131366,
+              "height": 1.2533034095186864,
+              "rotation": 0,
+              "text": [
+                "4.29%"
+              ]
+            },
+            "id": "7s4eXwlffX",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2025-06-28T14:56:32.734243Z",
+        "updated_at": "2025-06-28T14:56:32.734255Z",
+        "draft_created_at": "2025-06-28T14:56:23.055122Z",
+        "lead_time": 23.987,
+        "prediction": {},
+        "result_count": 2,
+        "unique_id": "5b5512ee-01e2-4aab-8d1e-4852b79c0ff8",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 16,
+        "project": 4,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "1ee586d4-page_121.png",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "ocr": "\/data\/upload\/4\/1ee586d4-page_121.png"
+    },
+    "meta": {},
+    "created_at": "2025-06-28T14:56:05.978747Z",
+    "updated_at": "2025-06-28T14:56:32.747798Z",
+    "inner_id": 16,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 4,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 17,
+    "annotations": [
+      {
+        "id": 19,
+        "completed_by": 1,
+        "result": [
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 10.446925093208279,
+              "y": 30.406690031191214,
+              "width": 32.510526612403666,
+              "height": 1.3786337504705632,
+              "rotation": 0
+            },
+            "id": "ILwcNcU0B_",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 10.446925093208279,
+              "y": 30.406690031191214,
+              "width": 32.510526612403666,
+              "height": 1.3786337504705632,
+              "rotation": 0,
+              "text": [
+                "Base Case: Average of 4.5 percent over 75 years"
+              ]
+            },
+            "id": "ILwcNcU0B_",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 72.19710216493841,
+              "y": 30.55987155902128,
+              "width": 2.6761713979722543,
+              "height": 1.072270694810431,
+              "rotation": 0
+            },
+            "id": "NnEOJlcnnl",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2550,
+            "original_height": 3300,
+            "image_rotation": 0,
+            "value": {
+              "x": 72.19710216493841,
+              "y": 30.55987155902128,
+              "width": 2.6761713979722543,
+              "height": 1.072270694810431,
+              "rotation": 0,
+              "text": [
+                "0.8"
+              ]
+            },
+            "id": "NnEOJlcnnl",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2025-06-28T14:59:07.349630Z",
+        "updated_at": "2025-06-28T14:59:07.349651Z",
+        "draft_created_at": "2025-06-28T14:58:42.036236Z",
+        "lead_time": 46.501,
+        "prediction": {},
+        "result_count": 2,
+        "unique_id": "86284be6-17fe-4a50-9e80-2d26f75a3324",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 17,
+        "project": 4,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "e057911d-page_183.png",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "ocr": "\/data\/upload\/4\/e057911d-page_183.png"
+    },
+    "meta": {},
+    "created_at": "2025-06-28T14:58:18.167062Z",
+    "updated_at": "2025-06-28T14:59:07.364752Z",
+    "inner_id": 17,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 4,
+    "updated_by": 1,
+    "comment_authors": []
+  }
+]

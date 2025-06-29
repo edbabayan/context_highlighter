@@ -1,0 +1,1222 @@
+[
+  {
+    "id": 60,
+    "annotations": [
+      {
+        "id": 62,
+        "completed_by": 1,
+        "result": [
+          {
+            "original_width": 1275,
+            "original_height": 2100,
+            "image_rotation": 0,
+            "value": {
+              "x": 6.0666411501045365,
+              "y": 10.097375009814098,
+              "width": 10.046466049401662,
+              "height": 1.0357879417509803,
+              "rotation": 0
+            },
+            "id": "J_gx5kBjXo",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 1275,
+            "original_height": 2100,
+            "image_rotation": 0,
+            "value": {
+              "x": 6.0666411501045365,
+              "y": 10.097375009814098,
+              "width": 10.046466049401662,
+              "height": 1.0357879417509803,
+              "rotation": 0,
+              "text": [
+                " Bonds (Schedule D)"
+              ]
+            },
+            "id": "J_gx5kBjXo",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          },
+          {
+            "original_width": 1275,
+            "original_height": 2100,
+            "image_rotation": 0,
+            "value": {
+              "x": 87.29975046585074,
+              "y": 10.097375009814098,
+              "width": 5.971012840682121,
+              "height": 0.9782441672092581,
+              "rotation": 0
+            },
+            "id": "c8s99nDWUr",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 1275,
+            "original_height": 2100,
+            "image_rotation": 0,
+            "value": {
+              "x": 87.29975046585074,
+              "y": 10.097375009814098,
+              "width": 5.971012840682121,
+              "height": 0.9782441672092581,
+              "rotation": 0,
+              "text": [
+                "29,556,906"
+              ]
+            },
+            "id": "c8s99nDWUr",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2025-06-29T11:35:23.405591Z",
+        "updated_at": "2025-06-29T11:35:23.405601Z",
+        "draft_created_at": "2025-06-29T11:35:02.560304Z",
+        "lead_time": 47.538,
+        "prediction": {},
+        "result_count": 2,
+        "unique_id": "06b29c40-503d-42aa-b2a2-834205f38bf6",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 60,
+        "project": 15,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "14fd4895-sample-annual-statement_page-0002.jpg",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "ocr": "\/data\/upload\/15\/14fd4895-sample-annual-statement_page-0002.jpg"
+    },
+    "meta": {},
+    "created_at": "2025-06-29T11:30:32.059857Z",
+    "updated_at": "2025-06-29T11:35:23.414839Z",
+    "inner_id": 1,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 15,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 61,
+    "annotations": [
+      {
+        "id": 63,
+        "completed_by": 1,
+        "result": [
+          {
+            "original_width": 1275,
+            "original_height": 2100,
+            "image_rotation": 0,
+            "value": {
+              "x": 8.945145903231417,
+              "y": 47.702277082549074,
+              "width": 15.481983294054356,
+              "height": 0.9747915407367529,
+              "rotation": 0
+            },
+            "id": "Iiw2wZRgTS",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 1275,
+            "original_height": 2100,
+            "image_rotation": 0,
+            "value": {
+              "x": 8.945145903231417,
+              "y": 47.702277082549074,
+              "width": 15.481983294054356,
+              "height": 0.9747915407367529,
+              "rotation": 0,
+              "text": [
+                "Aggregate write-ins for liabilities"
+              ]
+            },
+            "id": "Iiw2wZRgTS",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          },
+          {
+            "original_width": 1275,
+            "original_height": 2100,
+            "image_rotation": 0,
+            "value": {
+              "x": 77.86864190120674,
+              "y": 47.63264911535355,
+              "width": 5.734067886686631,
+              "height": 0.9747915407367577,
+              "rotation": 0
+            },
+            "id": "L1tVeZKkpQ",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 1275,
+            "original_height": 2100,
+            "image_rotation": 0,
+            "value": {
+              "x": 77.86864190120674,
+              "y": 47.63264911535355,
+              "width": 5.734067886686631,
+              "height": 0.9747915407367577,
+              "rotation": 0,
+              "text": [
+                "5,530,950"
+              ]
+            },
+            "id": "L1tVeZKkpQ",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2025-06-29T11:36:04.027916Z",
+        "updated_at": "2025-06-29T11:36:04.027927Z",
+        "draft_created_at": "2025-06-29T11:35:34.367832Z",
+        "lead_time": 38.773,
+        "prediction": {},
+        "result_count": 2,
+        "unique_id": "f3efb180-c23f-44e6-b516-0970945afe1e",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 61,
+        "project": 15,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "ee68c8ad-sample-annual-statement_page-0003.jpg",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "ocr": "\/data\/upload\/15\/ee68c8ad-sample-annual-statement_page-0003.jpg"
+    },
+    "meta": {},
+    "created_at": "2025-06-29T11:30:32.059938Z",
+    "updated_at": "2025-06-29T11:36:04.038015Z",
+    "inner_id": 2,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 15,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 62,
+    "annotations": [
+      {
+        "id": 64,
+        "completed_by": 1,
+        "result": [
+          {
+            "original_width": 1275,
+            "original_height": 2100,
+            "image_rotation": 0,
+            "value": {
+              "x": 5.940139959789693,
+              "y": 44.81630460739864,
+              "width": 39.47777084748509,
+              "height": 0.9511367692846449,
+              "rotation": 0
+            },
+            "id": "V10ebGFoA_",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 1275,
+            "original_height": 2100,
+            "image_rotation": 0,
+            "value": {
+              "x": 5.940139959789693,
+              "y": 44.81630460739864,
+              "width": 39.47777084748509,
+              "height": 0.9511367692846449,
+              "rotation": 0,
+              "text": [
+                "Change in nonadmitted assets (Exhibit of Nonadmitted Assets, Line 28, Column 3)"
+              ]
+            },
+            "id": "V10ebGFoA_",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          },
+          {
+            "original_width": 1275,
+            "original_height": 2100,
+            "image_rotation": 0,
+            "value": {
+              "x": 74.54310411620504,
+              "y": 44.81630460739866,
+              "width": 4.934721355935635,
+              "height": 0.9986936077488832,
+              "rotation": 0
+            },
+            "id": "HnNEuh1R1l",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 1275,
+            "original_height": 2100,
+            "image_rotation": 0,
+            "value": {
+              "x": 74.54310411620504,
+              "y": 44.81630460739866,
+              "width": 4.934721355935635,
+              "height": 0.9986936077488832,
+              "rotation": 0,
+              "text": [
+                "(265,605) "
+              ]
+            },
+            "id": "HnNEuh1R1l",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2025-06-29T11:37:05.922847Z",
+        "updated_at": "2025-06-29T11:37:05.922859Z",
+        "draft_created_at": "2025-06-29T11:36:23.283922Z",
+        "lead_time": 60.439,
+        "prediction": {},
+        "result_count": 2,
+        "unique_id": "3bb93c46-aaea-4f8d-b7f5-61a2c41558b2",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 62,
+        "project": 15,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8697de14-sample-annual-statement_page-0004.jpg",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "ocr": "\/data\/upload\/15\/8697de14-sample-annual-statement_page-0004.jpg"
+    },
+    "meta": {},
+    "created_at": "2025-06-29T11:30:32.059979Z",
+    "updated_at": "2025-06-29T11:37:05.935512Z",
+    "inner_id": 3,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 15,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 63,
+    "annotations": [
+      {
+        "id": 65,
+        "completed_by": 1,
+        "result": [
+          {
+            "original_width": 1275,
+            "original_height": 2100,
+            "image_rotation": 0,
+            "value": {
+              "x": 12.132431972384786,
+              "y": 66.68769461709913,
+              "width": 8.624796325429728,
+              "height": 1.0933317162926812,
+              "rotation": 0
+            },
+            "id": "Nqs8m-Ci01",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 1275,
+            "original_height": 2100,
+            "image_rotation": 0,
+            "value": {
+              "x": 12.132431972384786,
+              "y": 66.68769461709913,
+              "width": 8.624796325429728,
+              "height": 1.0933317162926812,
+              "rotation": 0,
+              "text": [
+                "Beginning of year"
+              ]
+            },
+            "id": "Nqs8m-Ci01",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          },
+          {
+            "original_width": 1275,
+            "original_height": 2100,
+            "image_rotation": 0,
+            "value": {
+              "x": 76.01279156952366,
+              "y": 67.14804481343289,
+              "width": 5.023233024700843,
+              "height": 0.8631566181258137,
+              "rotation": 0
+            },
+            "id": "7fxbEIkcgk",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 1275,
+            "original_height": 2100,
+            "image_rotation": 0,
+            "value": {
+              "x": 76.01279156952366,
+              "y": 67.14804481343289,
+              "width": 5.023233024700843,
+              "height": 0.8631566181258137,
+              "rotation": 0,
+              "text": [
+                "17,386,528"
+              ]
+            },
+            "id": "7fxbEIkcgk",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2025-06-29T11:37:34.391913Z",
+        "updated_at": "2025-06-29T11:37:34.391922Z",
+        "draft_created_at": "2025-06-29T11:37:19.630164Z",
+        "lead_time": 27.039,
+        "prediction": {},
+        "result_count": 2,
+        "unique_id": "5b75240a-550d-462e-9910-4b2db4279d75",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 63,
+        "project": 15,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "59a37143-sample-annual-statement_page-0005.jpg",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "ocr": "\/data\/upload\/15\/59a37143-sample-annual-statement_page-0005.jpg"
+    },
+    "meta": {},
+    "created_at": "2025-06-29T11:30:32.060015Z",
+    "updated_at": "2025-06-29T11:37:34.403566Z",
+    "inner_id": 4,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 15,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 64,
+    "annotations": [
+      {
+        "id": 66,
+        "completed_by": 1,
+        "result": [
+          {
+            "original_width": 1275,
+            "original_height": 2100,
+            "image_rotation": 0,
+            "value": {
+              "x": 10.780047626971191,
+              "y": 50.4177678031729,
+              "width": 10.55068491150371,
+              "height": 1.1836754423232065,
+              "rotation": 0
+            },
+            "id": "Ssa5DJnwLh",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 1275,
+            "original_height": 2100,
+            "image_rotation": 0,
+            "value": {
+              "x": 10.780047626971191,
+              "y": 50.4177678031729,
+              "width": 10.55068491150371,
+              "height": 1.1836754423232065,
+              "rotation": 0,
+              "text": [
+                "Auto physical damage"
+              ]
+            },
+            "id": "Ssa5DJnwLh",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          },
+          {
+            "original_width": 1275,
+            "original_height": 2100,
+            "image_rotation": 0,
+            "value": {
+              "x": 51.9506550533824,
+              "y": 50.48739577036838,
+              "width": 5.390023813485591,
+              "height": 1.1140474751277267,
+              "rotation": 0
+            },
+            "id": "8JVFvB2XnS",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 1275,
+            "original_height": 2100,
+            "image_rotation": 0,
+            "value": {
+              "x": 51.9506550533824,
+              "y": 50.48739577036838,
+              "width": 5.390023813485591,
+              "height": 1.1140474751277267,
+              "rotation": 0,
+              "text": [
+                "31,807,722"
+              ]
+            },
+            "id": "8JVFvB2XnS",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2025-06-29T11:38:48.741837Z",
+        "updated_at": "2025-06-29T11:38:48.741850Z",
+        "draft_created_at": "2025-06-29T11:38:33.242327Z",
+        "lead_time": 73.279,
+        "prediction": {},
+        "result_count": 2,
+        "unique_id": "5deda456-bf72-45ff-9cae-e9f0a24f521f",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 64,
+        "project": 15,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "b44baf4e-sample-annual-statement_page-0006.jpg",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "ocr": "\/data\/upload\/15\/b44baf4e-sample-annual-statement_page-0006.jpg"
+    },
+    "meta": {},
+    "created_at": "2025-06-29T11:30:32.060054Z",
+    "updated_at": "2025-06-29T11:38:48.755019Z",
+    "inner_id": 5,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 15,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 65,
+    "annotations": [
+      {
+        "id": 67,
+        "completed_by": 1,
+        "result": [
+          {
+            "original_width": 1275,
+            "original_height": 2100,
+            "image_rotation": 0,
+            "value": {
+              "x": 10.665366269237456,
+              "y": 55.082841605270225,
+              "width": 3.325759374278345,
+              "height": 0.9747915407367529,
+              "rotation": 0
+            },
+            "id": "o8TIKJ9tgg",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 1275,
+            "original_height": 2100,
+            "image_rotation": 0,
+            "value": {
+              "x": 10.665366269237456,
+              "y": 55.082841605270225,
+              "width": 3.325759374278345,
+              "height": 0.9747915407367529,
+              "rotation": 0,
+              "text": [
+                "Credit"
+              ]
+            },
+            "id": "o8TIKJ9tgg",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          },
+          {
+            "original_width": 1275,
+            "original_height": 2100,
+            "image_rotation": 0,
+            "value": {
+              "x": 48.51021432137032,
+              "y": 55.082841605270225,
+              "width": 2.2936271546747236,
+              "height": 0.9747915407367529,
+              "rotation": 0
+            },
+            "id": "78IYZvjqBZ",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 1275,
+            "original_height": 2100,
+            "image_rotation": 0,
+            "value": {
+              "x": 48.51021432137032,
+              "y": 55.082841605270225,
+              "width": 2.2936271546747236,
+              "height": 0.9747915407367529,
+              "rotation": 0,
+              "text": [
+                "167"
+              ]
+            },
+            "id": "78IYZvjqBZ",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2025-06-29T11:39:06.568085Z",
+        "updated_at": "2025-06-29T11:39:06.568104Z",
+        "draft_created_at": "2025-06-29T11:39:02.822855Z",
+        "lead_time": 16.491,
+        "prediction": {},
+        "result_count": 2,
+        "unique_id": "0e00488b-9a68-4caf-b827-867ab34b9c30",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 65,
+        "project": 15,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "2b1f0316-sample-annual-statement_page-0007.jpg",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "ocr": "\/data\/upload\/15\/2b1f0316-sample-annual-statement_page-0007.jpg"
+    },
+    "meta": {},
+    "created_at": "2025-06-29T11:30:32.060089Z",
+    "updated_at": "2025-06-29T11:39:06.583565Z",
+    "inner_id": 6,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 15,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 66,
+    "annotations": [
+      {
+        "id": 68,
+        "completed_by": 1,
+        "result": [
+          {
+            "original_width": 1275,
+            "original_height": 2100,
+            "image_rotation": 0,
+            "value": {
+              "x": 10.436003553769984,
+              "y": 68.3817833396074,
+              "width": 4.701935667083175,
+              "height": 1.1140474751277196,
+              "rotation": 0
+            },
+            "id": "1yIIq32lWl",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 1275,
+            "original_height": 2100,
+            "image_rotation": 0,
+            "value": {
+              "x": 10.436003553769984,
+              "y": 68.3817833396074,
+              "width": 4.701935667083175,
+              "height": 1.1140474751277196,
+              "rotation": 0,
+              "text": [
+                "TOTALS"
+              ]
+            },
+            "id": "1yIIq32lWl",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          },
+          {
+            "original_width": 1275,
+            "original_height": 2100,
+            "image_rotation": 0,
+            "value": {
+              "x": 53.09746863071976,
+              "y": 68.52103927399835,
+              "width": 5.734067886686795,
+              "height": 0.8355356063457862,
+              "rotation": 0
+            },
+            "id": "yPydwNZgQn",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 1275,
+            "original_height": 2100,
+            "image_rotation": 0,
+            "value": {
+              "x": 53.09746863071976,
+              "y": 68.52103927399835,
+              "width": 5.734067886686795,
+              "height": 0.8355356063457862,
+              "rotation": 0,
+              "text": [
+                "32,413,988"
+              ]
+            },
+            "id": "yPydwNZgQn",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2025-06-29T11:39:37.505339Z",
+        "updated_at": "2025-06-29T11:39:37.505350Z",
+        "draft_created_at": "2025-06-29T11:39:23.193906Z",
+        "lead_time": 28.46,
+        "prediction": {},
+        "result_count": 2,
+        "unique_id": "a4496f95-a018-47c2-a519-aaac060e5dd9",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 66,
+        "project": 15,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "7b310cd5-sample-annual-statement_page-0008.jpg",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "ocr": "\/data\/upload\/15\/7b310cd5-sample-annual-statement_page-0008.jpg"
+    },
+    "meta": {},
+    "created_at": "2025-06-29T11:30:32.060124Z",
+    "updated_at": "2025-06-29T11:39:37.516134Z",
+    "inner_id": 7,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 15,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 67,
+    "annotations": [
+      {
+        "id": 69,
+        "completed_by": 1,
+        "result": [
+          {
+            "original_width": 2100,
+            "original_height": 1275,
+            "image_rotation": 0,
+            "value": {
+              "x": 7.907760777211938,
+              "y": 43.43298546923419,
+              "width": 7.44259837855241,
+              "height": 1.5322996661725554,
+              "rotation": 0
+            },
+            "id": "K_9y2XzvKB",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2100,
+            "original_height": 1275,
+            "image_rotation": 0,
+            "value": {
+              "x": 7.907760777211938,
+              "y": 43.43298546923419,
+              "width": 7.44259837855241,
+              "height": 1.5322996661725554,
+              "rotation": 0,
+              "text": [
+                "Other liability - occurrence"
+              ]
+            },
+            "id": "K_9y2XzvKB",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2100,
+            "original_height": 1275,
+            "image_rotation": 0,
+            "value": {
+              "x": 35.42986936456721,
+              "y": 43.43298546923419,
+              "width": 2.0932307939678623,
+              "height": 1.276916388477133,
+              "rotation": 0
+            },
+            "id": "t13ka7vXvt",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2100,
+            "original_height": 1275,
+            "image_rotation": 0,
+            "value": {
+              "x": 35.42986936456721,
+              "y": 43.43298546923419,
+              "width": 2.0932307939678623,
+              "height": 1.276916388477133,
+              "rotation": 0,
+              "text": [
+                "32,269"
+              ]
+            },
+            "id": "t13ka7vXvt",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2025-06-29T11:41:00.945257Z",
+        "updated_at": "2025-06-29T11:41:00.945269Z",
+        "draft_created_at": "2025-06-29T11:40:44.267742Z",
+        "lead_time": 81.936,
+        "prediction": {},
+        "result_count": 2,
+        "unique_id": "467dc535-da53-4af0-96f4-a0b477f1e184",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 67,
+        "project": 15,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "b48e9653-sample-annual-statement_page-0009.jpg",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "ocr": "\/data\/upload\/15\/b48e9653-sample-annual-statement_page-0009.jpg"
+    },
+    "meta": {},
+    "created_at": "2025-06-29T11:30:32.060158Z",
+    "updated_at": "2025-06-29T11:41:00.959246Z",
+    "inner_id": 8,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 15,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 68,
+    "annotations": [
+      {
+        "id": 70,
+        "completed_by": 1,
+        "result": [
+          {
+            "original_width": 2100,
+            "original_height": 1275,
+            "image_rotation": 0,
+            "value": {
+              "x": 6.9239500567536885,
+              "y": 50.290445349535965,
+              "width": 8.62656072644722,
+              "height": 1.6825799559324253,
+              "rotation": 0
+            },
+            "id": "OO9JU4qhix",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2100,
+            "original_height": 1275,
+            "image_rotation": 0,
+            "value": {
+              "x": 6.9239500567536885,
+              "y": 50.290445349535965,
+              "width": 8.62656072644722,
+              "height": 1.6825799559324253,
+              "rotation": 0,
+              "text": [
+                "Products liability - occurrence"
+              ]
+            },
+            "id": "OO9JU4qhix",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2100,
+            "original_height": 1275,
+            "image_rotation": 0,
+            "value": {
+              "x": 32.46311010215664,
+              "y": 50.103492021099015,
+              "width": 3.2917139614074955,
+              "height": 1.8695332843693748,
+              "rotation": 0
+            },
+            "id": "JeW83wtBNr",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 2100,
+            "original_height": 1275,
+            "image_rotation": 0,
+            "value": {
+              "x": 32.46311010215664,
+              "y": 50.103492021099015,
+              "width": 3.2917139614074955,
+              "height": 1.8695332843693748,
+              "rotation": 0,
+              "text": [
+                "7,254,000"
+              ]
+            },
+            "id": "JeW83wtBNr",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2025-06-29T11:41:33.360643Z",
+        "updated_at": "2025-06-29T11:41:33.360654Z",
+        "draft_created_at": "2025-06-29T11:41:15.301323Z",
+        "lead_time": 31.211,
+        "prediction": {},
+        "result_count": 2,
+        "unique_id": "dbe0f9f7-da86-4444-aa8d-22b8ae797645",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 68,
+        "project": 15,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "35643155-sample-annual-statement_page-0010.jpg",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "ocr": "\/data\/upload\/15\/35643155-sample-annual-statement_page-0010.jpg"
+    },
+    "meta": {},
+    "created_at": "2025-06-29T11:30:32.060193Z",
+    "updated_at": "2025-06-29T11:41:33.370281Z",
+    "inner_id": 9,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 15,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 69,
+    "annotations": [
+      {
+        "id": 71,
+        "completed_by": 1,
+        "result": [
+          {
+            "original_width": 1275,
+            "original_height": 2100,
+            "image_rotation": 0,
+            "value": {
+              "x": 5.619386528953075,
+              "y": 53.62065429416509,
+              "width": 8.601101830030196,
+              "height": 1.1140474751277196,
+              "rotation": 0
+            },
+            "id": "y9uIw0KjC2",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 1275,
+            "original_height": 2100,
+            "image_rotation": 0,
+            "value": {
+              "x": 5.619386528953075,
+              "y": 53.62065429416509,
+              "width": 8.601101830030196,
+              "height": 1.1140474751277196,
+              "rotation": 0,
+              "text": [
+                " Legal and auditing"
+              ]
+            },
+            "id": "y9uIw0KjC2",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          },
+          {
+            "original_width": 1275,
+            "original_height": 2100,
+            "image_rotation": 0,
+            "value": {
+              "x": 90.48359125191767,
+              "y": 53.69028226136058,
+              "width": 2.981715301077145,
+              "height": 0.905163573541266,
+              "rotation": 0
+            },
+            "id": "Cy7NjeSVcb",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 1275,
+            "original_height": 2100,
+            "image_rotation": 0,
+            "value": {
+              "x": 90.48359125191767,
+              "y": 53.69028226136058,
+              "width": 2.981715301077145,
+              "height": 0.905163573541266,
+              "rotation": 0,
+              "text": [
+                "5,620"
+              ]
+            },
+            "id": "Cy7NjeSVcb",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2025-06-29T11:42:03.527061Z",
+        "updated_at": "2025-06-29T11:42:03.527070Z",
+        "draft_created_at": "2025-06-29T11:41:47.373028Z",
+        "lead_time": 28.744,
+        "prediction": {},
+        "result_count": 2,
+        "unique_id": "d34d7351-7717-465a-bd1b-68a88dd52b52",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 69,
+        "project": 15,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8a52f1b1-sample-annual-statement_page-0011.jpg",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "ocr": "\/data\/upload\/15\/8a52f1b1-sample-annual-statement_page-0011.jpg"
+    },
+    "meta": {},
+    "created_at": "2025-06-29T11:30:47.955919Z",
+    "updated_at": "2025-06-29T11:42:03.539037Z",
+    "inner_id": 10,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 15,
+    "updated_by": 1,
+    "comment_authors": []
+  }
+]
