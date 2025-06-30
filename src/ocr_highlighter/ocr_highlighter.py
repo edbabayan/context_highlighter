@@ -153,10 +153,14 @@ def _find_sentence_boxes(sentence, ocr_data, scale_factor, table_bbox=None):
             block = text_blocks[block_idx]
             target_word = words[word_idx]
             
-            # Use fuzzy matching for individual words
-            similarity = difflib.SequenceMatcher(None, block['word'], target_word).ratio()
+            # Use exact matching for numeric values, fuzzy matching for text
+            if re.match(r'^\d+\.?\d*$', target_word):  # If target is numeric
+                match = block['word'] == target_word
+            else:  # Use fuzzy matching for text
+                similarity = difflib.SequenceMatcher(None, block['word'], target_word).ratio()
+                match = similarity > 0.8  # 80% similarity threshold
             
-            if similarity > 0.8:  # 80% similarity threshold
+            if match:
                 matched_blocks.append(block)
                 word_idx += 1
             elif matched_blocks:  # If we had matches but this doesn't match, stop
