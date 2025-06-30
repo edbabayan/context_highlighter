@@ -3,6 +3,8 @@ import os
 from pathlib import Path
 from typing import List, Dict, Tuple, Callable
 import numpy as np
+import pandas as pd
+from datetime import datetime
 from config import CFG
 
 
@@ -247,50 +249,75 @@ def evaluate_highlighting_function(highlighting_func: Callable, pdfs_dir: str, p
     return results
 
 
-def example_highlighting_function(pdf_path: str, page_number: int, sentences: List[str]) -> List[Dict]:
+def save_results_to_excel(results: Dict, function_name: str, output_dir: str = None) -> str:
     """
-    Example highlighting function that uses the OCR highlighter.
-    Replace this with your actual highlighting function.
+    Save evaluation results to an Excel file with multiple sheets.
     
     Args:
-        pdf_path: Path to PDF file
-        page_number: Page number to process
-        sentences: List of sentences to find
+        results: Dictionary with evaluation results from evaluate_highlighting_function
+        function_name: Name of the highlighting function being evaluated
+        output_dir: Output directory (defaults to evaluation directory)
         
     Returns:
-        List of dictionaries with 'sentence' and 'bbox' keys
+        Path to the saved Excel file
     """
-    # Import your highlighting function here
-    import sys
-    sys.path.append(str(Path(__file__).parent.parent))
-    from src.ocr_highlighter.ocr_highlighter import highlight_sentences_with_ocr
+    if output_dir is None:
+        output_dir = Path(__file__).parent
+    else:
+        output_dir = Path(output_dir)
     
-    # Create a temporary output file (we only need the bboxes)
-    import tempfile
-    with tempfile.NamedTemporaryFile(suffix='.pdf', delete=False) as tmp_file:
-        tmp_output = tmp_file.name
+    # Create Excel filename
+    excel_filename = f"{function_name}.xlsx"
+    excel_path = output_dir / excel_filename
     
-    try:
-        # Call the highlighting function
-        results = highlight_sentences_with_ocr(
-            pdf_path, tmp_output, page_number, sentences, table=True, table_index=0
-        )
+    # Create Excel writer
+    with pd.ExcelWriter(excel_path, engine='openpyxl') as writer:
         
-        # Convert results to expected format
-        predicted_boxes = []
-        for result in results:
-            predicted_boxes.append({
-                'sentence': result['sentence'],
-                'bbox': result['bbox'],  # Should be [left, top, right, bottom]
-                'confidence': 1.0
+        # Create Summary Sheet
+        summary_data = []
+        for filename, file_result in results['file_results'].items():
+            summary_data.append({
+                'PDF_Name': filename.replace('.json', '.pdf'),
+                'mAP_Score': file_result['mAP'],
+                'Pages_Evaluated': file_result['num_pages']
             })
         
-        return predicted_boxes
+        # Add overall statistics
+        summary_data.append({
+            'PDF_Name': 'OVERALL_MEAN',
+            'mAP_Score': results['overall_mAP_75'],
+            'Pages_Evaluated': results['total_pages_evaluated']
+        })
         
-    finally:
-        # Clean up temporary file
-        if os.path.exists(tmp_output):
-            os.unlink(tmp_output)
+        summary_df = pd.DataFrame(summary_data)
+        summary_df.to_excel(writer, sheet_name='Summary', index=False)
+        
+        # Create individual sheets for each PDF
+        for filename, file_result in results['file_results'].items():
+            pdf_name = filename.replace('.json', '')
+            
+            # Create page-level data
+            page_data = []
+            for i, ap_score in enumerate(file_result['ap_scores']):
+                page_data.append({
+                    'Page_Number': i + 1,
+                    'AP_Score': ap_score
+                })
+            
+            # Add summary row
+            page_data.append({
+                'Page_Number': 'AVERAGE',
+                'AP_Score': file_result['mAP']
+            })
+            
+            page_df = pd.DataFrame(page_data)
+            
+            # Clean sheet name (Excel sheet names can't be too long or contain certain characters)
+            sheet_name = pdf_name[:31].replace('/', '_').replace('\\', '_').replace('*', '_').replace('?', '_').replace(':', '_').replace('[', '_').replace(']', '_')
+            
+            page_df.to_excel(writer, sheet_name=sheet_name, index=False)
+    
+    return str(excel_path)
 
 
 if __name__ == "__main__":
@@ -320,3 +347,8 @@ if __name__ == "__main__":
     print("\nPer-file results:")
     for filename, file_result in results['file_results'].items():
         print(f"  {filename}: mAP = {file_result['mAP']:.3f} ({file_result['num_pages']} pages)")
+    
+    # Save results to Excel
+    function_name = highlight_sentences_on_page.__name__
+    excel_path = save_results_to_excel(results, function_name)
+    print(f"\nResults saved to Excel file: {excel_path}")
