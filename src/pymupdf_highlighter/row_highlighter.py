@@ -10,24 +10,41 @@ def highlight_sentences_on_page(pdf_path, output_path, page_number, sentences):
         output_path: Path to save the highlighted PDF
         page_number: Page number (1-indexed)
         sentences: List of sentences to highlight
+        
+    Returns:
+        List of dictionaries with sentence and bounding box
+        Format: [{'sentence': str, 'bbox': [left, top, right, bottom]}, ...]
     """
     pdf = fitz.open(pdf_path)
     
     if page_number < 1 or page_number > len(pdf):
         print(f"Invalid page number {page_number}")
         pdf.close()
-        return
+        return []
     
     page = pdf[page_number - 1]
+    result = []
     
     for sentence in sentences:
         quads = page.search_for(sentence)
+        bbox = []
+        
         if quads:
             page.add_highlight_annot(quads)
+            # Use the first found quad as the bounding box
+            if quads:
+                first_quad = quads[0]
+                bbox = [first_quad.x0, first_quad.y0, first_quad.x1, first_quad.y1]
+        
+        result.append({
+            'sentence': sentence,
+            'bbox': bbox
+        })
     
     pdf.save(output_path)
     pdf.close()
     print(f"Highlighted {len(sentences)} sentences on page {page_number}, saved to {output_path}")
+    return result
 
 def highlight_phrase(pdf_path, output_path, page_number, phrase):
     doc = fitz.open(pdf_path)

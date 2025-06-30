@@ -24,6 +24,10 @@ def highlight_sentences_with_ocr(pdf_path, output_path, page_number, sentences, 
         sentences: List of sentences to highlight
         table: Boolean flag to enable table-based filtering
         table_index: Index of the table to filter by (0-indexed)
+        
+    Returns:
+        List of dictionaries with sentence and bounding box
+        Format: [{'sentence': str, 'bbox': [left, top, right, bottom]}, ...]
     """
     pdf = fitz.open(pdf_path)
 
@@ -32,7 +36,7 @@ def highlight_sentences_with_ocr(pdf_path, output_path, page_number, sentences, 
     if page_number < 1 or page_number > len(pdf):
         logger.error(f"Invalid page number {page_number}")
         pdf.close()
-        return
+        return []
     
     page = pdf[page_number - 1]
     
@@ -67,13 +71,24 @@ def highlight_sentences_with_ocr(pdf_path, output_path, page_number, sentences, 
             selected_table = tables_data[table_index]
             table_bbox = selected_table['bbox']
     
-    highlighted_count = 0
+    result = []
     
     for sentence in sentences:
         # Find sentence in OCR text using fuzzy matching
         found_boxes = _find_sentence_boxes(sentence, ocr_data, scale_factor, table_bbox)
         
+        # Remove duplicate boxes
+        unique_boxes = []
         for box in found_boxes:
+            if box not in unique_boxes:
+                unique_boxes.append(box)
+        
+        result.append({
+            'sentence': sentence,
+            'bbox': unique_boxes[0] if unique_boxes else []
+        })
+        
+        for box in unique_boxes:
             # Convert box coordinates to PyMuPDF quad
             quad = fitz.Quad(
                 fitz.Point(box[0], box[1]),  # top-left
@@ -82,11 +97,11 @@ def highlight_sentences_with_ocr(pdf_path, output_path, page_number, sentences, 
                 fitz.Point(box[2], box[3])   # bottom-right
             )
             page.add_highlight_annot(quad)
-            highlighted_count += 1
     
     pdf.save(output_path)
     pdf.close()
     logger.success(f"Highlighted text regions using OCR on page {page_number}, saved to {output_path}")
+    return result
 
 
 def _find_sentence_boxes(sentence, ocr_data, scale_factor, table_bbox=None):
