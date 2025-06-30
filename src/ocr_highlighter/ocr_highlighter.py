@@ -13,7 +13,7 @@ from src.config import CFG
 from src.ocr_highlighter.table_extractor import extract_tables_from_pdf
 
 
-def highlight_sentences_with_ocr(pdf_path, output_path, page_number, sentences, table=False, table_index=0):
+def highlight_sentences_with_ocr(pdf_path, page_number, sentences, table=True, table_index=0, output_path=None):
     """
     Highlight multiple sentences on a specific page using OCR to find text locations.
     
