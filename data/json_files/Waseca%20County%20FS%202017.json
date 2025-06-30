@@ -1,23 +1,23 @@
 [
   {
-    "id": 60,
+    "id": 70,
     "annotations": [
       {
-        "id": 62,
+        "id": 72,
         "completed_by": 1,
         "result": [
           {
             "original_width": 1275,
-            "original_height": 2100,
+            "original_height": 1650,
             "image_rotation": 0,
             "value": {
-              "x": 6.0666411501045365,
-              "y": 10.097375009814098,
-              "width": 10.046466049401662,
-              "height": 1.0357879417509803,
+              "x": 19.863534249608623,
+              "y": 49.831500319386926,
+              "width": 7.850102767385273,
+              "height": 1.4322472852110693,
               "rotation": 0
             },
-            "id": "J_gx5kBjXo",
+            "id": "g2m5_zg4Tr",
             "from_name": "bbox",
             "to_name": "image",
             "type": "rectangle",
@@ -25,19 +25,19 @@
           },
           {
             "original_width": 1275,
-            "original_height": 2100,
+            "original_height": 1650,
             "image_rotation": 0,
             "value": {
-              "x": 6.0666411501045365,
-              "y": 10.097375009814098,
-              "width": 10.046466049401662,
-              "height": 1.0357879417509803,
+              "x": 19.863534249608623,
+              "y": 49.831500319386926,
+              "width": 7.850102767385273,
+              "height": 1.4322472852110693,
               "rotation": 0,
               "text": [
-                " Bonds (Schedule D)"
+                "Total assets"
               ]
             },
-            "id": "J_gx5kBjXo",
+            "id": "g2m5_zg4Tr",
             "from_name": "transcription",
             "to_name": "image",
             "type": "textarea",
@@ -45,16 +45,16 @@
           },
           {
             "original_width": 1275,
-            "original_height": 2100,
+            "original_height": 1650,
             "image_rotation": 0,
             "value": {
-              "x": 87.29975046585074,
-              "y": 10.097375009814098,
-              "width": 5.971012840682121,
-              "height": 0.9782441672092581,
+              "x": 63.80230390594564,
+              "y": 49.831500319386926,
+              "width": 7.086898331667264,
+              "height": 1.4322472852110693,
               "rotation": 0
             },
-            "id": "c8s99nDWUr",
+            "id": "YKh6rynV8g",
             "from_name": "bbox",
             "to_name": "image",
             "type": "rectangle",
@@ -62,19 +62,19 @@
           },
           {
             "original_width": 1275,
-            "original_height": 2100,
+            "original_height": 1650,
             "image_rotation": 0,
             "value": {
-              "x": 87.29975046585074,
-              "y": 10.097375009814098,
-              "width": 5.971012840682121,
-              "height": 0.9782441672092581,
+              "x": 63.80230390594564,
+              "y": 49.831500319386926,
+              "width": 7.086898331667264,
+              "height": 1.4322472852110693,
               "rotation": 0,
               "text": [
-                "29,556,906"
+                "85,691,412"
               ]
             },
-            "id": "c8s99nDWUr",
+            "id": "YKh6rynV8g",
             "from_name": "transcription",
             "to_name": "image",
             "type": "textarea",
@@ -83,33 +83,33 @@
         ],
         "was_cancelled": false,
         "ground_truth": false,
-        "created_at": "2025-06-29T11:35:23.405591Z",
-        "updated_at": "2025-06-29T11:35:23.405601Z",
-        "draft_created_at": "2025-06-29T11:35:02.560304Z",
-        "lead_time": 47.538,
+        "created_at": "2025-06-29T20:17:24.800193Z",
+        "updated_at": "2025-06-29T20:17:24.800219Z",
+        "draft_created_at": "2025-06-29T20:17:14.784865Z",
+        "lead_time": 21.033,
         "prediction": {},
         "result_count": 2,
-        "unique_id": "06b29c40-503d-42aa-b2a2-834205f38bf6",
+        "unique_id": "6dd9a363-5d87-4348-b534-46a0c6a1a9cc",
         "import_id": null,
         "last_action": null,
         "bulk_created": false,
-        "task": 60,
-        "project": 15,
+        "task": 70,
+        "project": 16,
         "updated_by": 1,
         "parent_prediction": null,
         "parent_annotation": null,
         "last_created_by": null
       }
     ],
-    "file_upload": "14fd4895-sample-annual-statement_page-0002.jpg",
+    "file_upload": "81faa321-Waseca20County20FS202017_page-0009.jpg",
     "drafts": [],
     "predictions": [],
     "data": {
-      "ocr": "\/data\/upload\/15\/14fd4895-sample-annual-statement_page-0002.jpg"
+      "ocr": "\/data\/upload\/16\/81faa321-Waseca20County20FS202017_page-0009.jpg"
     },
     "meta": {},
-    "created_at": "2025-06-29T11:30:32.059857Z",
-    "updated_at": "2025-06-29T11:35:23.414839Z",
+    "created_at": "2025-06-29T11:45:13.462354Z",
+    "updated_at": "2025-06-29T20:17:24.810993Z",
     "inner_id": 1,
     "total_annotations": 1,
     "cancelled_annotations": 0,
@@ -117,29 +117,29 @@
     "comment_count": 0,
     "unresolved_comment_count": 0,
     "last_comment_updated_at": null,
-    "project": 15,
+    "project": 16,
     "updated_by": 1,
     "comment_authors": []
   },
   {
-    "id": 61,
+    "id": 71,
     "annotations": [
       {
-        "id": 63,
+        "id": 73,
         "completed_by": 1,
         "result": [
           {
             "original_width": 1275,
-            "original_height": 2100,
+            "original_height": 1650,
             "image_rotation": 0,
             "value": {
-              "x": 8.945145903231417,
-              "y": 47.702277082549074,
-              "width": 15.481983294054356,
-              "height": 0.9747915407367529,
+              "x": 20.300101603924308,
+              "y": 40.32171255982793,
+              "width": 7.929396734732599,
+              "height": 1.3925593439096389,
               "rotation": 0
             },
-            "id": "Iiw2wZRgTS",
+            "id": "fGOQDDrNV3",
             "from_name": "bbox",
             "to_name": "image",
             "type": "rectangle",
@@ -147,19 +147,19 @@
           },
           {
             "original_width": 1275,
-            "original_height": 2100,
+            "original_height": 1650,
             "image_rotation": 0,
             "value": {
-              "x": 8.945145903231417,
-              "y": 47.702277082549074,
-              "width": 15.481983294054356,
-              "height": 0.9747915407367529,
+              "x": 20.300101603924308,
+              "y": 40.32171255982793,
+              "width": 7.929396734732599,
+              "height": 1.3925593439096389,
               "rotation": 0,
               "text": [
-                "Aggregate write-ins for liabilities"
+                "Public works"
               ]
             },
-            "id": "Iiw2wZRgTS",
+            "id": "fGOQDDrNV3",
             "from_name": "transcription",
             "to_name": "image",
             "type": "textarea",
@@ -167,16 +167,16 @@
           },
           {
             "original_width": 1275,
-            "original_height": 2100,
+            "original_height": 1650,
             "image_rotation": 0,
             "value": {
-              "x": 77.86864190120674,
-              "y": 47.63264911535355,
-              "width": 5.734067886686631,
-              "height": 0.9747915407367577,
+              "x": 64.90295823679519,
+              "y": 40.182456625436956,
+              "width": 6.217367894278965,
+              "height": 1.7406991798870664,
               "rotation": 0
             },
-            "id": "L1tVeZKkpQ",
+            "id": "7yh8YravWn",
             "from_name": "bbox",
             "to_name": "image",
             "type": "rectangle",
@@ -184,19 +184,19 @@
           },
           {
             "original_width": 1275,
-            "original_height": 2100,
+            "original_height": 1650,
             "image_rotation": 0,
             "value": {
-              "x": 77.86864190120674,
-              "y": 47.63264911535355,
-              "width": 5.734067886686631,
-              "height": 0.9747915407367577,
+              "x": 64.90295823679519,
+              "y": 40.182456625436956,
+              "width": 6.217367894278965,
+              "height": 1.7406991798870664,
               "rotation": 0,
               "text": [
-                "5,530,950"
+                "6,608,676"
               ]
             },
-            "id": "L1tVeZKkpQ",
+            "id": "7yh8YravWn",
             "from_name": "transcription",
             "to_name": "image",
             "type": "textarea",
@@ -205,33 +205,33 @@
         ],
         "was_cancelled": false,
         "ground_truth": false,
-        "created_at": "2025-06-29T11:36:04.027916Z",
-        "updated_at": "2025-06-29T11:36:04.027927Z",
-        "draft_created_at": "2025-06-29T11:35:34.367832Z",
-        "lead_time": 38.773,
+        "created_at": "2025-06-29T20:17:53.844679Z",
+        "updated_at": "2025-06-29T20:17:53.844689Z",
+        "draft_created_at": "2025-06-29T20:17:37.541579Z",
+        "lead_time": 27.757,
         "prediction": {},
         "result_count": 2,
-        "unique_id": "f3efb180-c23f-44e6-b516-0970945afe1e",
+        "unique_id": "e500b3ee-bac5-4255-8747-6ce121271111",
         "import_id": null,
         "last_action": null,
         "bulk_created": false,
-        "task": 61,
-        "project": 15,
+        "task": 71,
+        "project": 16,
         "updated_by": 1,
         "parent_prediction": null,
         "parent_annotation": null,
         "last_created_by": null
       }
     ],
-    "file_upload": "ee68c8ad-sample-annual-statement_page-0003.jpg",
+    "file_upload": "47906311-Waseca20County20FS202017_page-0010.jpg",
     "drafts": [],
     "predictions": [],
     "data": {
-      "ocr": "\/data\/upload\/15\/ee68c8ad-sample-annual-statement_page-0003.jpg"
+      "ocr": "\/data\/upload\/16\/47906311-Waseca20County20FS202017_page-0010.jpg"
     },
     "meta": {},
-    "created_at": "2025-06-29T11:30:32.059938Z",
-    "updated_at": "2025-06-29T11:36:04.038015Z",
+    "created_at": "2025-06-29T11:45:13.462394Z",
+    "updated_at": "2025-06-29T20:17:53.856505Z",
     "inner_id": 2,
     "total_annotations": 1,
     "cancelled_annotations": 0,
@@ -239,29 +239,29 @@
     "comment_count": 0,
     "unresolved_comment_count": 0,
     "last_comment_updated_at": null,
-    "project": 15,
+    "project": 16,
     "updated_by": 1,
     "comment_authors": []
   },
   {
-    "id": 62,
+    "id": 72,
     "annotations": [
       {
-        "id": 64,
+        "id": 74,
         "completed_by": 1,
         "result": [
           {
             "original_width": 1275,
-            "original_height": 2100,
+            "original_height": 1650,
             "image_rotation": 0,
             "value": {
-              "x": 5.940139959789693,
-              "y": 44.81630460739864,
-              "width": 39.47777084748509,
-              "height": 0.9511367692846449,
+              "x": 14.194015584274814,
+              "y": 17.816561002904045,
+              "width": 10.24874527964189,
+              "height": 1.6007469658241469,
               "rotation": 0
             },
-            "id": "V10ebGFoA_",
+            "id": "C4iX2wIpPy",
             "from_name": "bbox",
             "to_name": "image",
             "type": "rectangle",
@@ -269,19 +269,19 @@
           },
           {
             "original_width": 1275,
-            "original_height": 2100,
+            "original_height": 1650,
             "image_rotation": 0,
             "value": {
-              "x": 5.940139959789693,
-              "y": 44.81630460739864,
-              "width": 39.47777084748509,
-              "height": 0.9511367692846449,
+              "x": 14.194015584274814,
+              "y": 17.816561002904045,
+              "width": 10.24874527964189,
+              "height": 1.6007469658241469,
               "rotation": 0,
               "text": [
-                "Change in nonadmitted assets (Exhibit of Nonadmitted Assets, Line 28, Column 3)"
+                "General Fund"
               ]
             },
-            "id": "V10ebGFoA_",
+            "id": "C4iX2wIpPy",
             "from_name": "transcription",
             "to_name": "image",
             "type": "textarea",
@@ -289,16 +289,16 @@
           },
           {
             "original_width": 1275,
-            "original_height": 2100,
+            "original_height": 1650,
             "image_rotation": 0,
             "value": {
-              "x": 74.54310411620504,
-              "y": 44.81630460739866,
-              "width": 4.934721355935635,
-              "height": 0.9986936077488832,
+              "x": 76.88580851825442,
+              "y": 17.90081084321058,
+              "width": 7.741073562282708,
+              "height": 1.43224728521108,
               "rotation": 0
             },
-            "id": "HnNEuh1R1l",
+            "id": "A9hmeXG59N",
             "from_name": "bbox",
             "to_name": "image",
             "type": "rectangle",
@@ -306,19 +306,19 @@
           },
           {
             "original_width": 1275,
-            "original_height": 2100,
+            "original_height": 1650,
             "image_rotation": 0,
             "value": {
-              "x": 74.54310411620504,
-              "y": 44.81630460739866,
-              "width": 4.934721355935635,
-              "height": 0.9986936077488832,
+              "x": 76.88580851825442,
+              "y": 17.90081084321058,
+              "width": 7.741073562282708,
+              "height": 1.43224728521108,
               "rotation": 0,
               "text": [
-                "(265,605) "
+                "1,043,219"
               ]
             },
-            "id": "HnNEuh1R1l",
+            "id": "A9hmeXG59N",
             "from_name": "transcription",
             "to_name": "image",
             "type": "textarea",
@@ -327,33 +327,33 @@
         ],
         "was_cancelled": false,
         "ground_truth": false,
-        "created_at": "2025-06-29T11:37:05.922847Z",
-        "updated_at": "2025-06-29T11:37:05.922859Z",
-        "draft_created_at": "2025-06-29T11:36:23.283922Z",
-        "lead_time": 60.439,
+        "created_at": "2025-06-29T20:18:22.704831Z",
+        "updated_at": "2025-06-29T20:18:22.704844Z",
+        "draft_created_at": "2025-06-29T20:18:12.333440Z",
+        "lead_time": 27.799,
         "prediction": {},
         "result_count": 2,
-        "unique_id": "3bb93c46-aaea-4f8d-b7f5-61a2c41558b2",
+        "unique_id": "6986a259-c333-4f2e-8abc-ca878890bdb3",
         "import_id": null,
         "last_action": null,
         "bulk_created": false,
-        "task": 62,
-        "project": 15,
+        "task": 72,
+        "project": 16,
         "updated_by": 1,
         "parent_prediction": null,
         "parent_annotation": null,
         "last_created_by": null
       }
     ],
-    "file_upload": "8697de14-sample-annual-statement_page-0004.jpg",
+    "file_upload": "4708ac7e-Waseca20County20FS202017_page-0012.jpg",
     "drafts": [],
     "predictions": [],
     "data": {
-      "ocr": "\/data\/upload\/15\/8697de14-sample-annual-statement_page-0004.jpg"
+      "ocr": "\/data\/upload\/16\/4708ac7e-Waseca20County20FS202017_page-0012.jpg"
     },
     "meta": {},
-    "created_at": "2025-06-29T11:30:32.059979Z",
-    "updated_at": "2025-06-29T11:37:05.935512Z",
+    "created_at": "2025-06-29T11:45:13.462412Z",
+    "updated_at": "2025-06-29T20:18:22.716487Z",
     "inner_id": 3,
     "total_annotations": 1,
     "cancelled_annotations": 0,
@@ -361,29 +361,29 @@
     "comment_count": 0,
     "unresolved_comment_count": 0,
     "last_comment_updated_at": null,
-    "project": 15,
+    "project": 16,
     "updated_by": 1,
     "comment_authors": []
   },
   {
-    "id": 63,
+    "id": 73,
     "annotations": [
       {
-        "id": 65,
+        "id": 75,
         "completed_by": 1,
         "result": [
           {
             "original_width": 1275,
-            "original_height": 2100,
+            "original_height": 1650,
             "image_rotation": 0,
             "value": {
-              "x": 12.132431972384786,
-              "y": 66.68769461709913,
-              "width": 8.624796325429728,
-              "height": 1.0933317162926812,
+              "x": 8.088380098530711,
+              "y": 27.589542478461983,
+              "width": 23.441279097053254,
+              "height": 1.6007469658241398,
               "rotation": 0
             },
-            "id": "Nqs8m-Ci01",
+            "id": "NBpnC_hK5_",
             "from_name": "bbox",
             "to_name": "image",
             "type": "rectangle",
@@ -391,19 +391,19 @@
           },
           {
             "original_width": 1275,
-            "original_height": 2100,
+            "original_height": 1650,
             "image_rotation": 0,
             "value": {
-              "x": 12.132431972384786,
-              "y": 66.68769461709913,
-              "width": 8.624796325429728,
-              "height": 1.0933317162926812,
+              "x": 8.088380098530711,
+              "y": 27.589542478461983,
+              "width": 23.441279097053254,
+              "height": 1.6007469658241398,
               "rotation": 0,
               "text": [
-                "Beginning of year"
+                "Nonmajor Governmental Funds"
               ]
             },
-            "id": "Nqs8m-Ci01",
+            "id": "NBpnC_hK5_",
             "from_name": "transcription",
             "to_name": "image",
             "type": "textarea",
@@ -411,16 +411,16 @@
           },
           {
             "original_width": 1275,
-            "original_height": 2100,
+            "original_height": 1650,
             "image_rotation": 0,
             "value": {
-              "x": 76.01279156952366,
-              "y": 67.14804481343289,
-              "width": 5.023233024700843,
-              "height": 0.8631566181258137,
+              "x": 58.350843650816984,
+              "y": 27.50529263815545,
+              "width": 5.12437263982094,
+              "height": 1.8534964867437367,
               "rotation": 0
             },
-            "id": "7fxbEIkcgk",
+            "id": "EReUJdPEJo",
             "from_name": "bbox",
             "to_name": "image",
             "type": "rectangle",
@@ -428,19 +428,19 @@
           },
           {
             "original_width": 1275,
-            "original_height": 2100,
+            "original_height": 1650,
             "image_rotation": 0,
             "value": {
-              "x": 76.01279156952366,
-              "y": 67.14804481343289,
-              "width": 5.023233024700843,
-              "height": 0.8631566181258137,
+              "x": 58.350843650816984,
+              "y": 27.50529263815545,
+              "width": 5.12437263982094,
+              "height": 1.8534964867437367,
               "rotation": 0,
               "text": [
-                "17,386,528"
+                "7.20%"
               ]
             },
-            "id": "7fxbEIkcgk",
+            "id": "EReUJdPEJo",
             "from_name": "transcription",
             "to_name": "image",
             "type": "textarea",
@@ -449,33 +449,33 @@
         ],
         "was_cancelled": false,
         "ground_truth": false,
-        "created_at": "2025-06-29T11:37:34.391913Z",
-        "updated_at": "2025-06-29T11:37:34.391922Z",
-        "draft_created_at": "2025-06-29T11:37:19.630164Z",
-        "lead_time": 27.039,
+        "created_at": "2025-06-29T20:18:51.490561Z",
+        "updated_at": "2025-06-29T20:18:51.490575Z",
+        "draft_created_at": "2025-06-29T20:18:39.036319Z",
+        "lead_time": 27.452,
         "prediction": {},
         "result_count": 2,
-        "unique_id": "5b75240a-550d-462e-9910-4b2db4279d75",
+        "unique_id": "25882ad8-1c60-4ea7-8377-7e51a2696234",
         "import_id": null,
         "last_action": null,
         "bulk_created": false,
-        "task": 63,
-        "project": 15,
+        "task": 73,
+        "project": 16,
         "updated_by": 1,
         "parent_prediction": null,
         "parent_annotation": null,
         "last_created_by": null
       }
     ],
-    "file_upload": "59a37143-sample-annual-statement_page-0005.jpg",
+    "file_upload": "d3bae06c-Waseca20County20FS202017_page-0013.jpg",
     "drafts": [],
     "predictions": [],
     "data": {
-      "ocr": "\/data\/upload\/15\/59a37143-sample-annual-statement_page-0005.jpg"
+      "ocr": "\/data\/upload\/16\/d3bae06c-Waseca20County20FS202017_page-0013.jpg"
     },
     "meta": {},
-    "created_at": "2025-06-29T11:30:32.060015Z",
-    "updated_at": "2025-06-29T11:37:34.403566Z",
+    "created_at": "2025-06-29T11:45:13.462428Z",
+    "updated_at": "2025-06-29T20:18:51.503625Z",
     "inner_id": 4,
     "total_annotations": 1,
     "cancelled_annotations": 0,
@@ -483,29 +483,29 @@
     "comment_count": 0,
     "unresolved_comment_count": 0,
     "last_comment_updated_at": null,
-    "project": 15,
+    "project": 16,
     "updated_by": 1,
     "comment_authors": []
   },
   {
-    "id": 64,
+    "id": 74,
     "annotations": [
       {
-        "id": 66,
+        "id": 76,
         "completed_by": 1,
         "result": [
           {
             "original_width": 1275,
-            "original_height": 2100,
+            "original_height": 1650,
             "image_rotation": 0,
             "value": {
-              "x": 10.780047626971191,
-              "y": 50.4177678031729,
-              "width": 10.55068491150371,
-              "height": 1.1836754423232065,
+              "x": 16.37459968632628,
+              "y": 29.443038965205726,
+              "width": 14.173796663334517,
+              "height": 1.6007469658241433,
               "rotation": 0
             },
-            "id": "Ssa5DJnwLh",
+            "id": "Rh2jEiGSYB",
             "from_name": "bbox",
             "to_name": "image",
             "type": "rectangle",
@@ -513,19 +513,19 @@
           },
           {
             "original_width": 1275,
-            "original_height": 2100,
+            "original_height": 1650,
             "image_rotation": 0,
             "value": {
-              "x": 10.780047626971191,
-              "y": 50.4177678031729,
-              "width": 10.55068491150371,
-              "height": 1.1836754423232065,
+              "x": 16.37459968632628,
+              "y": 29.443038965205726,
+              "width": 14.173796663334517,
+              "height": 1.6007469658241433,
               "rotation": 0,
               "text": [
-                "Auto physical damage"
+                "Total Expenditures"
               ]
             },
-            "id": "Ssa5DJnwLh",
+            "id": "Rh2jEiGSYB",
             "from_name": "transcription",
             "to_name": "image",
             "type": "textarea",
@@ -533,16 +533,16 @@
           },
           {
             "original_width": 1275,
-            "original_height": 2100,
+            "original_height": 1650,
             "image_rotation": 0,
             "value": {
-              "x": 51.9506550533824,
-              "y": 50.48739577036838,
-              "width": 5.390023813485591,
-              "height": 1.1140474751277267,
+              "x": 57.15152239468867,
+              "y": 29.52728880551226,
+              "width": 10.575832894949613,
+              "height": 1.43224728521108,
               "rotation": 0
             },
-            "id": "8JVFvB2XnS",
+            "id": "gX5AHFRFr6",
             "from_name": "bbox",
             "to_name": "image",
             "type": "rectangle",
@@ -550,19 +550,19 @@
           },
           {
             "original_width": 1275,
-            "original_height": 2100,
+            "original_height": 1650,
             "image_rotation": 0,
             "value": {
-              "x": 51.9506550533824,
-              "y": 50.48739577036838,
-              "width": 5.390023813485591,
-              "height": 1.1140474751277267,
+              "x": 57.15152239468867,
+              "y": 29.52728880551226,
+              "width": 10.575832894949613,
+              "height": 1.43224728521108,
               "rotation": 0,
               "text": [
-                "31,807,722"
+                "$ 23,451,567"
               ]
             },
-            "id": "8JVFvB2XnS",
+            "id": "gX5AHFRFr6",
             "from_name": "transcription",
             "to_name": "image",
             "type": "textarea",
@@ -571,33 +571,33 @@
         ],
         "was_cancelled": false,
         "ground_truth": false,
-        "created_at": "2025-06-29T11:38:48.741837Z",
-        "updated_at": "2025-06-29T11:38:48.741850Z",
-        "draft_created_at": "2025-06-29T11:38:33.242327Z",
-        "lead_time": 73.279,
+        "created_at": "2025-06-29T20:19:13.835441Z",
+        "updated_at": "2025-06-29T20:19:13.835453Z",
+        "draft_created_at": "2025-06-29T20:19:06.986493Z",
+        "lead_time": 21.19,
         "prediction": {},
         "result_count": 2,
-        "unique_id": "5deda456-bf72-45ff-9cae-e9f0a24f521f",
+        "unique_id": "71c332f3-4211-43cd-81a7-ca34822e09a6",
         "import_id": null,
         "last_action": null,
         "bulk_created": false,
-        "task": 64,
-        "project": 15,
+        "task": 74,
+        "project": 16,
         "updated_by": 1,
         "parent_prediction": null,
         "parent_annotation": null,
         "last_created_by": null
       }
     ],
-    "file_upload": "b44baf4e-sample-annual-statement_page-0006.jpg",
+    "file_upload": "83e5cf26-Waseca20County20FS202017_page-0014.jpg",
     "drafts": [],
     "predictions": [],
     "data": {
-      "ocr": "\/data\/upload\/15\/b44baf4e-sample-annual-statement_page-0006.jpg"
+      "ocr": "\/data\/upload\/16\/83e5cf26-Waseca20County20FS202017_page-0014.jpg"
     },
     "meta": {},
-    "created_at": "2025-06-29T11:30:32.060054Z",
-    "updated_at": "2025-06-29T11:38:48.755019Z",
+    "created_at": "2025-06-29T11:45:13.462446Z",
+    "updated_at": "2025-06-29T20:19:13.845346Z",
     "inner_id": 5,
     "total_annotations": 1,
     "cancelled_annotations": 0,
@@ -605,29 +605,29 @@
     "comment_count": 0,
     "unresolved_comment_count": 0,
     "last_comment_updated_at": null,
-    "project": 15,
+    "project": 16,
     "updated_by": 1,
     "comment_authors": []
   },
   {
-    "id": 65,
+    "id": 75,
     "annotations": [
       {
-        "id": 67,
+        "id": 77,
         "completed_by": 1,
         "result": [
           {
             "original_width": 1275,
-            "original_height": 2100,
+            "original_height": 1650,
             "image_rotation": 0,
             "value": {
-              "x": 10.665366269237456,
-              "y": 55.082841605270225,
-              "width": 3.325759374278345,
-              "height": 0.9747915407367529,
+              "x": 9.832847380171886,
+              "y": 69.63021279142238,
+              "width": 15.918263944975694,
+              "height": 1.4322472852110764,
               "rotation": 0
             },
-            "id": "o8TIKJ9tgg",
+            "id": "0YT-ry_sXc",
             "from_name": "bbox",
             "to_name": "image",
             "type": "rectangle",
@@ -635,19 +635,19 @@
           },
           {
             "original_width": 1275,
-            "original_height": 2100,
+            "original_height": 1650,
             "image_rotation": 0,
             "value": {
-              "x": 10.665366269237456,
-              "y": 55.082841605270225,
-              "width": 3.325759374278345,
-              "height": 0.9747915407367529,
+              "x": 9.832847380171886,
+              "y": 69.63021279142238,
+              "width": 15.918263944975694,
+              "height": 1.4322472852110764,
               "rotation": 0,
               "text": [
-                "Credit"
+                "Machinery and Equipment"
               ]
             },
-            "id": "o8TIKJ9tgg",
+            "id": "0YT-ry_sXc",
             "from_name": "transcription",
             "to_name": "image",
             "type": "textarea",
@@ -655,16 +655,16 @@
           },
           {
             "original_width": 1275,
-            "original_height": 2100,
+            "original_height": 1650,
             "image_rotation": 0,
             "value": {
-              "x": 48.51021432137032,
-              "y": 55.082841605270225,
-              "width": 2.2936271546747236,
-              "height": 0.9747915407367529,
+              "x": 88.33387505402463,
+              "y": 69.79871247203545,
+              "width": 7.086898331667257,
+              "height": 1.4322472852110906,
               "rotation": 0
             },
-            "id": "78IYZvjqBZ",
+            "id": "d2btc3ILuR",
             "from_name": "bbox",
             "to_name": "image",
             "type": "rectangle",
@@ -672,19 +672,19 @@
           },
           {
             "original_width": 1275,
-            "original_height": 2100,
+            "original_height": 1650,
             "image_rotation": 0,
             "value": {
-              "x": 48.51021432137032,
-              "y": 55.082841605270225,
-              "width": 2.2936271546747236,
-              "height": 0.9747915407367529,
+              "x": 88.33387505402463,
+              "y": 69.79871247203545,
+              "width": 7.086898331667257,
+              "height": 1.4322472852110906,
               "rotation": 0,
               "text": [
-                "167"
+                "(5,318,190)"
               ]
             },
-            "id": "78IYZvjqBZ",
+            "id": "d2btc3ILuR",
             "from_name": "transcription",
             "to_name": "image",
             "type": "textarea",
@@ -693,33 +693,33 @@
         ],
         "was_cancelled": false,
         "ground_truth": false,
-        "created_at": "2025-06-29T11:39:06.568085Z",
-        "updated_at": "2025-06-29T11:39:06.568104Z",
-        "draft_created_at": "2025-06-29T11:39:02.822855Z",
-        "lead_time": 16.491,
+        "created_at": "2025-06-29T20:23:02.884390Z",
+        "updated_at": "2025-06-29T20:23:02.884405Z",
+        "draft_created_at": "2025-06-29T20:22:53.783799Z",
+        "lead_time": 40.758,
         "prediction": {},
         "result_count": 2,
-        "unique_id": "0e00488b-9a68-4caf-b827-867ab34b9c30",
+        "unique_id": "288131d8-25e0-4132-a303-152ee1e813fc",
         "import_id": null,
         "last_action": null,
         "bulk_created": false,
-        "task": 65,
-        "project": 15,
+        "task": 75,
+        "project": 16,
         "updated_by": 1,
         "parent_prediction": null,
         "parent_annotation": null,
         "last_created_by": null
       }
     ],
-    "file_upload": "2b1f0316-sample-annual-statement_page-0007.jpg",
+    "file_upload": "46279fda-Waseca20County20FS202017_page-0016.jpg",
     "drafts": [],
     "predictions": [],
     "data": {
-      "ocr": "\/data\/upload\/15\/2b1f0316-sample-annual-statement_page-0007.jpg"
+      "ocr": "\/data\/upload\/16\/46279fda-Waseca20County20FS202017_page-0016.jpg"
     },
     "meta": {},
-    "created_at": "2025-06-29T11:30:32.060089Z",
-    "updated_at": "2025-06-29T11:39:06.583565Z",
+    "created_at": "2025-06-29T20:22:17.035690Z",
+    "updated_at": "2025-06-29T20:23:02.897332Z",
     "inner_id": 6,
     "total_annotations": 1,
     "cancelled_annotations": 0,
@@ -727,29 +727,29 @@
     "comment_count": 0,
     "unresolved_comment_count": 0,
     "last_comment_updated_at": null,
-    "project": 15,
+    "project": 16,
     "updated_by": 1,
     "comment_authors": []
   },
   {
-    "id": 66,
+    "id": 76,
     "annotations": [
       {
-        "id": 68,
+        "id": 78,
         "completed_by": 1,
         "result": [
           {
             "original_width": 1275,
-            "original_height": 2100,
+            "original_height": 1650,
             "image_rotation": 0,
             "value": {
-              "x": 10.436003553769984,
-              "y": 68.3817833396074,
-              "width": 4.701935667083175,
-              "height": 1.1140474751277196,
+              "x": 7.532923617208078,
+              "y": 52.537313432835816,
+              "width": 19.508340649692713,
+              "height": 1.7910447761193993,
               "rotation": 0
             },
-            "id": "1yIIq32lWl",
+            "id": "2iyGNhUAz3",
             "from_name": "bbox",
             "to_name": "image",
             "type": "rectangle",
@@ -757,19 +757,19 @@
           },
           {
             "original_width": 1275,
-            "original_height": 2100,
+            "original_height": 1650,
             "image_rotation": 0,
             "value": {
-              "x": 10.436003553769984,
-              "y": 68.3817833396074,
-              "width": 4.701935667083175,
-              "height": 1.1140474751277196,
+              "x": 7.532923617208078,
+              "y": 52.537313432835816,
+              "width": 19.508340649692713,
+              "height": 1.7910447761193993,
               "rotation": 0,
               "text": [
-                "TOTALS"
+                "State-Aid Highway Bonds"
               ]
             },
-            "id": "1yIIq32lWl",
+            "id": "2iyGNhUAz3",
             "from_name": "transcription",
             "to_name": "image",
             "type": "textarea",
@@ -777,16 +777,16 @@
           },
           {
             "original_width": 1275,
-            "original_height": 2100,
+            "original_height": 1650,
             "image_rotation": 0,
             "value": {
-              "x": 53.09746863071976,
-              "y": 68.52103927399835,
-              "width": 5.734067886686795,
-              "height": 0.8355356063457862,
+              "x": 84.4073748902546,
+              "y": 52.83582089552239,
+              "width": 7.14661984196664,
+              "height": 1.6417910447761201,
               "rotation": 0
             },
-            "id": "yPydwNZgQn",
+            "id": "i9d11qks4R",
             "from_name": "bbox",
             "to_name": "image",
             "type": "rectangle",
@@ -794,19 +794,19 @@
           },
           {
             "original_width": 1275,
-            "original_height": 2100,
+            "original_height": 1650,
             "image_rotation": 0,
             "value": {
-              "x": 53.09746863071976,
-              "y": 68.52103927399835,
-              "width": 5.734067886686795,
-              "height": 0.8355356063457862,
+              "x": 84.4073748902546,
+              "y": 52.83582089552239,
+              "width": 7.14661984196664,
+              "height": 1.6417910447761201,
               "rotation": 0,
               "text": [
-                "32,413,988"
+                "740,000"
               ]
             },
-            "id": "yPydwNZgQn",
+            "id": "i9d11qks4R",
             "from_name": "transcription",
             "to_name": "image",
             "type": "textarea",
@@ -815,33 +815,33 @@
         ],
         "was_cancelled": false,
         "ground_truth": false,
-        "created_at": "2025-06-29T11:39:37.505339Z",
-        "updated_at": "2025-06-29T11:39:37.505350Z",
-        "draft_created_at": "2025-06-29T11:39:23.193906Z",
-        "lead_time": 28.46,
+        "created_at": "2025-06-29T20:23:27.378614Z",
+        "updated_at": "2025-06-29T20:23:27.378629Z",
+        "draft_created_at": "2025-06-29T20:23:14.371763Z",
+        "lead_time": 22.728,
         "prediction": {},
         "result_count": 2,
-        "unique_id": "a4496f95-a018-47c2-a519-aaac060e5dd9",
+        "unique_id": "fbbf8eeb-0a87-487a-9f06-3dde9eee4016",
         "import_id": null,
         "last_action": null,
         "bulk_created": false,
-        "task": 66,
-        "project": 15,
+        "task": 76,
+        "project": 16,
         "updated_by": 1,
         "parent_prediction": null,
         "parent_annotation": null,
         "last_created_by": null
       }
     ],
-    "file_upload": "7b310cd5-sample-annual-statement_page-0008.jpg",
+    "file_upload": "5d4a17e6-Waseca20County20FS202017_page-0017.jpg",
     "drafts": [],
     "predictions": [],
     "data": {
-      "ocr": "\/data\/upload\/15\/7b310cd5-sample-annual-statement_page-0008.jpg"
+      "ocr": "\/data\/upload\/16\/5d4a17e6-Waseca20County20FS202017_page-0017.jpg"
     },
     "meta": {},
-    "created_at": "2025-06-29T11:30:32.060124Z",
-    "updated_at": "2025-06-29T11:39:37.516134Z",
+    "created_at": "2025-06-29T20:22:17.035724Z",
+    "updated_at": "2025-06-29T20:23:27.388333Z",
     "inner_id": 7,
     "total_annotations": 1,
     "cancelled_annotations": 0,
@@ -849,86 +849,86 @@
     "comment_count": 0,
     "unresolved_comment_count": 0,
     "last_comment_updated_at": null,
-    "project": 15,
+    "project": 16,
     "updated_by": 1,
     "comment_authors": []
   },
   {
-    "id": 67,
+    "id": 77,
     "annotations": [
       {
-        "id": 69,
+        "id": 79,
         "completed_by": 1,
         "result": [
           {
-            "original_width": 2100,
-            "original_height": 1275,
+            "original_width": 1275,
+            "original_height": 1650,
             "image_rotation": 0,
             "value": {
-              "x": 7.907760777211938,
-              "y": 43.43298546923419,
-              "width": 7.44259837855241,
-              "height": 1.5322996661725554,
+              "x": 12.231489892428495,
+              "y": 55.39198977961816,
+              "width": 18.42593566233488,
+              "height": 1.6849968061306768,
               "rotation": 0
             },
-            "id": "K_9y2XzvKB",
+            "id": "t0TR9HKT_b",
             "from_name": "bbox",
             "to_name": "image",
             "type": "rectangle",
             "origin": "manual"
           },
           {
-            "original_width": 2100,
-            "original_height": 1275,
+            "original_width": 1275,
+            "original_height": 1650,
             "image_rotation": 0,
             "value": {
-              "x": 7.907760777211938,
-              "y": 43.43298546923419,
-              "width": 7.44259837855241,
-              "height": 1.5322996661725554,
+              "x": 12.231489892428495,
+              "y": 55.39198977961816,
+              "width": 18.42593566233488,
+              "height": 1.6849968061306768,
               "rotation": 0,
               "text": [
-                "Other liability - occurrence"
+                "Due to other governments"
               ]
             },
-            "id": "K_9y2XzvKB",
+            "id": "t0TR9HKT_b",
             "from_name": "transcription",
             "to_name": "image",
             "type": "textarea",
             "origin": "manual"
           },
           {
-            "original_width": 2100,
-            "original_height": 1275,
+            "original_width": 1275,
+            "original_height": 1650,
             "image_rotation": 0,
             "value": {
-              "x": 35.42986936456721,
-              "y": 43.43298546923419,
-              "width": 2.0932307939678623,
-              "height": 1.276916388477133,
+              "x": 80.81085990194707,
+              "y": 55.39198977961816,
+              "width": 6.323693895949248,
+              "height": 1.5164971255176098,
               "rotation": 0
             },
-            "id": "t13ka7vXvt",
+            "id": "pIDl1x9QCv",
             "from_name": "bbox",
             "to_name": "image",
             "type": "rectangle",
             "origin": "manual"
           },
           {
-            "original_width": 2100,
-            "original_height": 1275,
+            "original_width": 1275,
+            "original_height": 1650,
             "image_rotation": 0,
             "value": {
-              "x": 35.42986936456721,
-              "y": 43.43298546923419,
-              "width": 2.0932307939678623,
-              "height": 1.276916388477133,
+              "x": 80.81085990194707,
+              "y": 55.39198977961816,
+              "width": 6.323693895949248,
+              "height": 1.5164971255176098,
               "rotation": 0,
               "text": [
-                "32,269"
+                "215,838"
               ]
             },
-            "id": "t13ka7vXvt",
+            "id": "pIDl1x9QCv",
             "from_name": "transcription",
             "to_name": "image",
             "type": "textarea",
@@ -937,33 +937,33 @@
         ],
         "was_cancelled": false,
         "ground_truth": false,
-        "created_at": "2025-06-29T11:41:00.945257Z",
-        "updated_at": "2025-06-29T11:41:00.945269Z",
-        "draft_created_at": "2025-06-29T11:40:44.267742Z",
-        "lead_time": 81.936,
+        "created_at": "2025-06-29T20:23:52.012081Z",
+        "updated_at": "2025-06-29T20:23:52.012092Z",
+        "draft_created_at": "2025-06-29T20:23:40.502070Z",
+        "lead_time": 23.633,
         "prediction": {},
         "result_count": 2,
-        "unique_id": "467dc535-da53-4af0-96f4-a0b477f1e184",
+        "unique_id": "f1d1f069-dc21-4da4-a849-b8f868a894f9",
         "import_id": null,
         "last_action": null,
         "bulk_created": false,
-        "task": 67,
-        "project": 15,
+        "task": 77,
+        "project": 16,
         "updated_by": 1,
         "parent_prediction": null,
         "parent_annotation": null,
         "last_created_by": null
       }
     ],
-    "file_upload": "b48e9653-sample-annual-statement_page-0009.jpg",
+    "file_upload": "015a4666-Waseca20County20FS202017_page-0019.jpg",
     "drafts": [],
     "predictions": [],
     "data": {
-      "ocr": "\/data\/upload\/15\/b48e9653-sample-annual-statement_page-0009.jpg"
+      "ocr": "\/data\/upload\/16\/015a4666-Waseca20County20FS202017_page-0019.jpg"
     },
     "meta": {},
-    "created_at": "2025-06-29T11:30:32.060158Z",
-    "updated_at": "2025-06-29T11:41:00.959246Z",
+    "created_at": "2025-06-29T20:22:17.035744Z",
+    "updated_at": "2025-06-29T20:23:52.022120Z",
     "inner_id": 8,
     "total_annotations": 1,
     "cancelled_annotations": 0,
@@ -971,86 +971,86 @@
     "comment_count": 0,
     "unresolved_comment_count": 0,
     "last_comment_updated_at": null,
-    "project": 15,
+    "project": 16,
     "updated_by": 1,
     "comment_authors": []
   },
   {
-    "id": 68,
+    "id": 78,
     "annotations": [
       {
-        "id": 70,
+        "id": 80,
         "completed_by": 1,
         "result": [
           {
-            "original_width": 2100,
-            "original_height": 1275,
+            "original_width": 1275,
+            "original_height": 1650,
             "image_rotation": 0,
             "value": {
-              "x": 6.9239500567536885,
-              "y": 50.290445349535965,
-              "width": 8.62656072644722,
-              "height": 1.6825799559324253,
+              "x": 8.415467713838433,
+              "y": 50.505499041839194,
+              "width": 9.158453228616148,
+              "height": 1.2637476045980094,
               "rotation": 0
             },
-            "id": "OO9JU4qhix",
+            "id": "HNEPaZAnh6",
             "from_name": "bbox",
             "to_name": "image",
             "type": "rectangle",
             "origin": "manual"
           },
           {
-            "original_width": 2100,
-            "original_height": 1275,
+            "original_width": 1275,
+            "original_height": 1650,
             "image_rotation": 0,
             "value": {
-              "x": 6.9239500567536885,
-              "y": 50.290445349535965,
-              "width": 8.62656072644722,
-              "height": 1.6825799559324253,
+              "x": 8.415467713838433,
+              "y": 50.505499041839194,
+              "width": 9.158453228616148,
+              "height": 1.2637476045980094,
               "rotation": 0,
               "text": [
-                "Products liability - occurrence"
+                "Total Liabilities"
               ]
             },
-            "id": "OO9JU4qhix",
+            "id": "HNEPaZAnh6",
             "from_name": "transcription",
             "to_name": "image",
             "type": "textarea",
             "origin": "manual"
           },
           {
-            "original_width": 2100,
-            "original_height": 1275,
+            "original_width": 1275,
+            "original_height": 1650,
             "image_rotation": 0,
             "value": {
-              "x": 32.46311010215664,
-              "y": 50.103492021099015,
-              "width": 3.2917139614074955,
-              "height": 1.8695332843693748,
+              "x": 86.69843697748603,
+              "y": 50.42124920153266,
+              "width": 6.650781511256966,
+              "height": 1.3479974449045429,
               "rotation": 0
             },
-            "id": "JeW83wtBNr",
+            "id": "6tOW3N_vkY",
             "from_name": "bbox",
             "to_name": "image",
             "type": "rectangle",
             "origin": "manual"
           },
           {
-            "original_width": 2100,
-            "original_height": 1275,
+            "original_width": 1275,
+            "original_height": 1650,
             "image_rotation": 0,
             "value": {
-              "x": 32.46311010215664,
-              "y": 50.103492021099015,
-              "width": 3.2917139614074955,
-              "height": 1.8695332843693748,
+              "x": 86.69843697748603,
+              "y": 50.42124920153266,
+              "width": 6.650781511256966,
+              "height": 1.3479974449045429,
               "rotation": 0,
               "text": [
-                "7,254,000"
+                "2,087,856"
               ]
             },
-            "id": "JeW83wtBNr",
+            "id": "6tOW3N_vkY",
             "from_name": "transcription",
             "to_name": "image",
             "type": "textarea",
@@ -1059,33 +1059,33 @@
         ],
         "was_cancelled": false,
         "ground_truth": false,
-        "created_at": "2025-06-29T11:41:33.360643Z",
-        "updated_at": "2025-06-29T11:41:33.360654Z",
-        "draft_created_at": "2025-06-29T11:41:15.301323Z",
-        "lead_time": 31.211,
+        "created_at": "2025-06-29T20:24:25.439341Z",
+        "updated_at": "2025-06-29T20:24:25.439350Z",
+        "draft_created_at": "2025-06-29T20:24:08.896171Z",
+        "lead_time": 32.501,
         "prediction": {},
         "result_count": 2,
-        "unique_id": "dbe0f9f7-da86-4444-aa8d-22b8ae797645",
+        "unique_id": "e676ba44-cb50-4bb1-9d5a-56619ea2e41d",
         "import_id": null,
         "last_action": null,
         "bulk_created": false,
-        "task": 68,
-        "project": 15,
+        "task": 78,
+        "project": 16,
         "updated_by": 1,
         "parent_prediction": null,
         "parent_annotation": null,
         "last_created_by": null
       }
     ],
-    "file_upload": "35643155-sample-annual-statement_page-0010.jpg",
+    "file_upload": "9de8c852-Waseca20County20FS202017_page-0021.jpg",
     "drafts": [],
     "predictions": [],
     "data": {
-      "ocr": "\/data\/upload\/15\/35643155-sample-annual-statement_page-0010.jpg"
+      "ocr": "\/data\/upload\/16\/9de8c852-Waseca20County20FS202017_page-0021.jpg"
     },
     "meta": {},
-    "created_at": "2025-06-29T11:30:32.060193Z",
-    "updated_at": "2025-06-29T11:41:33.370281Z",
+    "created_at": "2025-06-29T20:22:17.035763Z",
+    "updated_at": "2025-06-29T20:24:25.453032Z",
     "inner_id": 9,
     "total_annotations": 1,
     "cancelled_annotations": 0,
@@ -1093,29 +1093,29 @@
     "comment_count": 0,
     "unresolved_comment_count": 0,
     "last_comment_updated_at": null,
-    "project": 15,
+    "project": 16,
     "updated_by": 1,
     "comment_authors": []
   },
   {
-    "id": 69,
+    "id": 79,
     "annotations": [
       {
-        "id": 71,
+        "id": 81,
         "completed_by": 1,
         "result": [
           {
             "original_width": 1275,
-            "original_height": 2100,
+            "original_height": 1650,
             "image_rotation": 0,
             "value": {
-              "x": 5.619386528953075,
-              "y": 53.62065429416509,
-              "width": 8.601101830030196,
-              "height": 1.1140474751277196,
+              "x": 11.68634386691563,
+              "y": 63.90122365057809,
+              "width": 22.023899430719794,
+              "height": 1.4322472852110764,
               "rotation": 0
             },
-            "id": "y9uIw0KjC2",
+            "id": "SJ6bnepBUJ",
             "from_name": "bbox",
             "to_name": "image",
             "type": "rectangle",
@@ -1123,19 +1123,19 @@
           },
           {
             "original_width": 1275,
-            "original_height": 2100,
+            "original_height": 1650,
             "image_rotation": 0,
             "value": {
-              "x": 5.619386528953075,
-              "y": 53.62065429416509,
-              "width": 8.601101830030196,
-              "height": 1.1140474751277196,
+              "x": 11.68634386691563,
+              "y": 63.90122365057809,
+              "width": 22.023899430719794,
+              "height": 1.4322472852110764,
               "rotation": 0,
               "text": [
-                " Legal and auditing"
+                "Total Other Financing Sources (Uses) "
               ]
             },
-            "id": "y9uIw0KjC2",
+            "id": "SJ6bnepBUJ",
             "from_name": "transcription",
             "to_name": "image",
             "type": "textarea",
@@ -1143,16 +1143,16 @@
           },
           {
             "original_width": 1275,
-            "original_height": 2100,
+            "original_height": 1650,
             "image_rotation": 0,
             "value": {
-              "x": 90.48359125191767,
-              "y": 53.69028226136058,
-              "width": 2.981715301077145,
-              "height": 0.905163573541266,
+              "x": 44.06801778237989,
+              "y": 63.985473490884615,
+              "width": 5.0153434347183605,
+              "height": 1.34799744490455,
               "rotation": 0
             },
-            "id": "Cy7NjeSVcb",
+            "id": "1dYQtRbojp",
             "from_name": "bbox",
             "to_name": "image",
             "type": "rectangle",
@@ -1160,19 +1160,19 @@
           },
           {
             "original_width": 1275,
-            "original_height": 2100,
+            "original_height": 1650,
             "image_rotation": 0,
             "value": {
-              "x": 90.48359125191767,
-              "y": 53.69028226136058,
-              "width": 2.981715301077145,
-              "height": 0.905163573541266,
+              "x": 44.06801778237989,
+              "y": 63.985473490884615,
+              "width": 5.0153434347183605,
+              "height": 1.34799744490455,
               "rotation": 0,
               "text": [
-                "5,620"
+                "(111,551)"
               ]
             },
-            "id": "Cy7NjeSVcb",
+            "id": "1dYQtRbojp",
             "from_name": "transcription",
             "to_name": "image",
             "type": "textarea",
@@ -1181,33 +1181,33 @@
         ],
         "was_cancelled": false,
         "ground_truth": false,
-        "created_at": "2025-06-29T11:42:03.527061Z",
-        "updated_at": "2025-06-29T11:42:03.527070Z",
-        "draft_created_at": "2025-06-29T11:41:47.373028Z",
-        "lead_time": 28.744,
+        "created_at": "2025-06-29T20:24:57.515943Z",
+        "updated_at": "2025-06-29T20:24:57.515955Z",
+        "draft_created_at": "2025-06-29T20:24:39.061632Z",
+        "lead_time": 31.095,
         "prediction": {},
         "result_count": 2,
-        "unique_id": "d34d7351-7717-465a-bd1b-68a88dd52b52",
+        "unique_id": "e5f3c7c1-3f3a-45fc-b2ee-7c09bd719562",
         "import_id": null,
         "last_action": null,
         "bulk_created": false,
-        "task": 69,
-        "project": 15,
+        "task": 79,
+        "project": 16,
         "updated_by": 1,
         "parent_prediction": null,
         "parent_annotation": null,
         "last_created_by": null
       }
     ],
-    "file_upload": "8a52f1b1-sample-annual-statement_page-0011.jpg",
+    "file_upload": "086a918c-Waseca20County20FS202017_page-0023.jpg",
     "drafts": [],
     "predictions": [],
     "data": {
-      "ocr": "\/data\/upload\/15\/8a52f1b1-sample-annual-statement_page-0011.jpg"
+      "ocr": "\/data\/upload\/16\/086a918c-Waseca20County20FS202017_page-0023.jpg"
     },
     "meta": {},
-    "created_at": "2025-06-29T11:30:47.955919Z",
-    "updated_at": "2025-06-29T11:42:03.539037Z",
+    "created_at": "2025-06-29T20:22:17.035782Z",
+    "updated_at": "2025-06-29T20:24:57.529726Z",
     "inner_id": 10,
     "total_annotations": 1,
     "cancelled_annotations": 0,
@@ -1215,7 +1215,7 @@
     "comment_count": 0,
     "unresolved_comment_count": 0,
     "last_comment_updated_at": null,
-    "project": 15,
+    "project": 16,
     "updated_by": 1,
     "comment_authors": []
   }
