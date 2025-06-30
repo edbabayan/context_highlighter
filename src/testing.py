@@ -1,4 +1,4 @@
-from src.highlighters.row_highlighter import highlight_sentences_on_page
+from src.pymupdf_highlighter.row_highlighter import highlight_sentences_on_page
 from src.config import CFG
 
 _pdf_path = "/Users/eduard_babayan/Documents/context_highlighter/Document.pdf"
