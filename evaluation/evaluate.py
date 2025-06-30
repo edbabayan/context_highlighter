@@ -1,10 +1,9 @@
 import json
-import os
 from pathlib import Path
-from typing import List, Dict, Tuple, Callable
+from typing import List, Dict, Callable
 import numpy as np
 import pandas as pd
-from datetime import datetime
+
 from config import CFG
 
 
@@ -44,7 +43,8 @@ def convert_percentage_to_absolute(bbox_percent: Dict, page_width: float, page_h
     
     Args:
         bbox_percent: {'x': %, 'y': %, 'width': %, 'height': %}
-        page_width, page_height: PDF page dimensions
+        page_width: PDF page width
+        page_height: PDF page height
         
     Returns:
         [left, top, right, bottom] in absolute coordinates
@@ -65,7 +65,8 @@ def calculate_ap_for_page(predicted_boxes: List[Dict], ground_truth_boxes: List[
     Args:
         predicted_boxes: List of predicted boxes with 'sentence' and 'bbox' keys
         ground_truth_boxes: List of ground truth boxes with 'text' and 'bbox' keys
-        page_width, page_height: PDF page dimensions
+        page_width: PDF page width
+        page_height: PDF page height
         iou_threshold: IoU threshold for positive detection
         
     Returns:
@@ -74,12 +75,20 @@ def calculate_ap_for_page(predicted_boxes: List[Dict], ground_truth_boxes: List[
     if not ground_truth_boxes:
         return 1.0 if not predicted_boxes else 0.0
     
+    # If no predictions, return 0.0 (all ground truths are false negatives)
     if not predicted_boxes:
         return 0.0
     
-    # Convert all boxes to absolute coordinates
+    # Convert all boxes to absolute coordinates and filter invalid ones
     pred_abs = []
+    invalid_predictions = 0
+    
     for pred in predicted_boxes:
+        # Check for empty or invalid bounding boxes
+        if not pred.get('bbox') or pred['bbox'] == {}:
+            invalid_predictions += 1
+            continue
+            
         if isinstance(pred['bbox'], list) and len(pred['bbox']) == 4:
             # Already in absolute coordinates [left, top, right, bottom]
             pred_abs.append({
@@ -87,14 +96,27 @@ def calculate_ap_for_page(predicted_boxes: List[Dict], ground_truth_boxes: List[
                 'bbox': pred['bbox'],
                 'confidence': pred.get('confidence', 1.0)
             })
+        elif isinstance(pred['bbox'], dict):
+            # Check if bbox dict has required keys for percentage conversion
+            required_keys = ['x', 'y', 'width', 'height']
+            if all(key in pred['bbox'] for key in required_keys):
+                # Convert from percentage
+                abs_bbox = convert_percentage_to_absolute(pred['bbox'], page_width, page_height)
+                pred_abs.append({
+                    'sentence': pred['sentence'],
+                    'bbox': abs_bbox,
+                    'confidence': pred.get('confidence', 1.0)
+                })
+            else:
+                invalid_predictions += 1
+                continue
         else:
-            # Convert from percentage
-            abs_bbox = convert_percentage_to_absolute(pred['bbox'], page_width, page_height)
-            pred_abs.append({
-                'sentence': pred['sentence'],
-                'bbox': abs_bbox,
-                'confidence': pred.get('confidence', 1.0)
-            })
+            invalid_predictions += 1
+            continue
+
+    # If all predictions were invalid, return 0.0 (all ground truths are false negatives)
+    if not pred_abs:
+        return 0.0
 
     gt_abs = []
     for gt in ground_truth_boxes:
@@ -140,7 +162,7 @@ def calculate_ap_for_page(predicted_boxes: List[Dict], ground_truth_boxes: List[
     # Calculate precision and recall arrays
     tp_cumsum = np.cumsum(true_positives)
     fp_cumsum = np.cumsum(false_positives)
-    
+
     precisions = tp_cumsum / (tp_cumsum + fp_cumsum)
     recalls = tp_cumsum / len(gt_abs)
     
@@ -156,7 +178,7 @@ def calculate_ap_for_page(predicted_boxes: List[Dict], ground_truth_boxes: List[
     return ap
 
 
-def evaluate_highlighting_function(highlighting_func: Callable, pdfs_dir: str, processed_json_dir: str) -> Dict:
+def evaluate_highlighting_function(highlighting_func: Callable, pdfs_dir: Path, processed_json_dir: Path) -> Dict:
     """
     Evaluate a highlighting function using mean Average Precision at IoU 0.75.
     
@@ -168,8 +190,8 @@ def evaluate_highlighting_function(highlighting_func: Callable, pdfs_dir: str, p
     Returns:
         Dictionary with evaluation metrics
     """
-    pdfs_path = Path(pdfs_dir)
-    json_path = Path(processed_json_dir)
+    pdfs_path = pdfs_dir
+    json_path = processed_json_dir
     
     total_ap = 0.0
     total_pages = 0
@@ -192,6 +214,7 @@ def evaluate_highlighting_function(highlighting_func: Callable, pdfs_dir: str, p
             pages_data = json.load(f)
         
         file_ap_scores = []
+        file_page_numbers = []
         
         for page_data in pages_data:
             page_filename = page_data['file_name']
@@ -219,6 +242,7 @@ def evaluate_highlighting_function(highlighting_func: Callable, pdfs_dir: str, p
                 ap = calculate_ap_for_page(predicted_boxes, gt_results, page_width, page_height)
                 
                 file_ap_scores.append(ap)
+                file_page_numbers.append(page_number)
                 total_ap += ap
                 total_pages += 1
                 
@@ -233,7 +257,8 @@ def evaluate_highlighting_function(highlighting_func: Callable, pdfs_dir: str, p
             file_results[json_file.name] = {
                 'mAP': file_map,
                 'num_pages': len(file_ap_scores),
-                'ap_scores': file_ap_scores
+                'ap_scores': file_ap_scores,
+                'page_numbers': file_page_numbers
             }
             print(f"File {json_file.name}: mAP = {file_map:.3f} ({len(file_ap_scores)} pages)")
     
@@ -256,13 +281,13 @@ def save_results_to_excel(results: Dict, function_name: str, output_dir: str = N
     Args:
         results: Dictionary with evaluation results from evaluate_highlighting_function
         function_name: Name of the highlighting function being evaluated
-        output_dir: Output directory (defaults to evaluation directory)
+        output_dir: Output directory (defaults to data directory)
         
     Returns:
         Path to the saved Excel file
     """
     if output_dir is None:
-        output_dir = Path(__file__).parent
+        output_dir = CFG.data_dir
     else:
         output_dir = Path(output_dir)
     
@@ -296,11 +321,11 @@ def save_results_to_excel(results: Dict, function_name: str, output_dir: str = N
         for filename, file_result in results['file_results'].items():
             pdf_name = filename.replace('.json', '')
             
-            # Create page-level data
+            # Create page-level data using actual page numbers
             page_data = []
-            for i, ap_score in enumerate(file_result['ap_scores']):
+            for page_number, ap_score in zip(file_result['page_numbers'], file_result['ap_scores']):
                 page_data.append({
-                    'Page_Number': i + 1,
+                    'Page_Number': page_number,
                     'AP_Score': ap_score
                 })
             
@@ -324,31 +349,31 @@ if __name__ == "__main__":
     from src.pymupdf_highlighter.row_highlighter import highlight_sentences_on_page
 
     # Example usage
-    pdfs_dir = CFG.pdf_dir
-    processed_json_dir = CFG.processed_json_dir
+    _pdfs_dir = CFG.pdf_dir
+    _processed_json_dir = CFG.processed_json_dir
     
     print("Starting evaluation...")
-    print(f"PDFs directory: {pdfs_dir}")
-    print(f"Processed JSON directory: {processed_json_dir}")
+    print(f"PDFs directory: {_pdfs_dir}")
+    print(f"Processed JSON directory: {_processed_json_dir}")
     
     # Run evaluation
-    results = evaluate_highlighting_function(
+    _results = evaluate_highlighting_function(
         highlight_sentences_on_page,
-        str(pdfs_dir),
-        str(processed_json_dir)
+        _pdfs_dir,
+        _processed_json_dir
     )
     
     print("\n" + "="*60)
     print("EVALUATION RESULTS")
     print("="*60)
-    print(f"Overall mAP@0.75: {results['overall_mAP_75']:.3f}")
-    print(f"Total pages evaluated: {results['total_pages_evaluated']}")
+    print(f"Overall mAP@0.75: {_results['overall_mAP_75']:.3f}")
+    print(f"Total pages evaluated: {_results['total_pages_evaluated']}")
     
     print("\nPer-file results:")
-    for filename, file_result in results['file_results'].items():
-        print(f"  {filename}: mAP = {file_result['mAP']:.3f} ({file_result['num_pages']} pages)")
+    for _filename, _file_result in _results['file_results'].items():
+        print(f"  {_filename}: mAP = {_file_result['mAP']:.3f} ({_file_result['num_pages']} pages)")
     
     # Save results to Excel
-    function_name = highlight_sentences_on_page.__name__
-    excel_path = save_results_to_excel(results, function_name)
-    print(f"\nResults saved to Excel file: {excel_path}")
+    _function_name = highlight_sentences_on_page.__name__
+    _excel_path = save_results_to_excel(_results, _function_name)
+    print(f"\nResults saved to Excel file: {_excel_path}")
