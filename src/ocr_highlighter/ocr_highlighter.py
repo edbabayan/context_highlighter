@@ -27,7 +27,7 @@ def highlight_sentences_with_ocr(pdf_path, page_number, sentences, table=True, t
         
     Returns:
         List of dictionaries with sentence and bounding box
-        Format: [{'sentence': str, 'bbox': [left, top, right, bottom]}, ...]
+        Format: [{'sentence': str, 'bbox': {'x': %, 'y': %, 'width': %, 'height': %}}, ...]
     """
     pdf = fitz.open(pdf_path)
 
@@ -39,6 +39,11 @@ def highlight_sentences_with_ocr(pdf_path, page_number, sentences, table=True, t
         return []
     
     page = pdf[page_number - 1]
+    
+    # Get page dimensions for percentage conversion
+    page_rect = page.rect
+    page_width = page_rect.width
+    page_height = page_rect.height
     
     # Convert page to image for OCR
     pix = page.get_pixmap(matrix=fitz.Matrix(2, 2))  # 2x scale for better OCR
@@ -86,9 +91,23 @@ def highlight_sentences_with_ocr(pdf_path, page_number, sentences, table=True, t
         # Add all unique boxes to results, not just the first one
         if unique_boxes:
             for box in unique_boxes:
+                # Convert absolute coordinates to percentage format (like PyMuPDF)
+                left, top, right, bottom = box
+                x_percent = (left / page_width) * 100.0
+                y_percent = (top / page_height) * 100.0
+                width_percent = ((right - left) / page_width) * 100.0
+                height_percent = ((bottom - top) / page_height) * 100.0
+                
+                bbox = {
+                    'x': x_percent,
+                    'y': y_percent,
+                    'width': width_percent,
+                    'height': height_percent
+                }
+                
                 result.append({
                     'sentence': sentence,
-                    'bbox': box
+                    'bbox': bbox
                 })
                 
                 # Convert box coordinates to PyMuPDF quad
@@ -103,12 +122,15 @@ def highlight_sentences_with_ocr(pdf_path, page_number, sentences, table=True, t
             # If no matches found, still add entry with empty bbox for consistency
             result.append({
                 'sentence': sentence,
-                'bbox': []
+                'bbox': {}
             })
     
-    pdf.save(output_path)
+    # Only save PDF if output_path is provided
+    if output_path:
+        pdf.save(output_path)
+        logger.success(f"Highlighted text regions using OCR on page {page_number}, saved to {output_path}")
+    
     pdf.close()
-    logger.success(f"Highlighted text regions using OCR on page {page_number}, saved to {output_path}")
     return result
 
 

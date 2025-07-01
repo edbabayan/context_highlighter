@@ -398,8 +398,8 @@ def save_results_to_excel(results: Dict, function_name: str, output_dir: str = N
 
 
 if __name__ == "__main__":
-    from src.pymupdf_highlighter.row_highlighter import highlight_sentences_on_page
-    # from src.ocr_highlighter.ocr_highlighter import highlight_sentences_with_ocr
+    # from src.pymupdf_highlighter.row_highlighter import highlight_sentences_on_page
+    from src.ocr_highlighter.ocr_highlighter import highlight_sentences_with_ocr
 
     # Example usage
     _pdfs_dir = CFG.pdf_dir
@@ -411,7 +411,7 @@ if __name__ == "__main__":
     
     # Run evaluation
     _results = evaluate_highlighting_function(
-        highlight_sentences_on_page,
+        highlight_sentences_with_ocr,
         _pdfs_dir,
         _processed_json_dir
     )
@@ -427,6 +427,6 @@ if __name__ == "__main__":
         print(f"  {_filename}: mAP = {_file_result['mAP']:.3f} ({_file_result['num_pages']} pages)")
     
     # Save results to Excel
-    _function_name = highlight_sentences_on_page.__name__
+    _function_name = highlight_sentences_with_ocr.__name__
     _excel_path = save_results_to_excel(_results, _function_name)
     print(f"\nResults saved to Excel file: {_excel_path}")
