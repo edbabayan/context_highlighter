@@ -1,10 +1,12 @@
 import json
 from pathlib import Path
 from typing import List, Dict, Callable
+
 import numpy as np
 import pandas as pd
 
 from config import CFG
+from draw_processed_bboxes import draw_processed_bboxes
 
 
 def calculate_iou(box1: List[float], box2: List[float]) -> float:
@@ -197,6 +199,10 @@ def evaluate_highlighting_function(highlighting_func: Callable, pdfs_dir: Path, 
     total_pages = 0
     file_results = {}
     
+    # Data structures for drawing bboxes
+    ground_truth_bboxes = {}
+    predicted_bboxes = {}
+    
     # Process each JSON file
     json_files = list(json_path.glob('*.json'))
     
@@ -215,6 +221,11 @@ def evaluate_highlighting_function(highlighting_func: Callable, pdfs_dir: Path, 
         
         file_ap_scores = []
         file_page_numbers = []
+        
+        # Initialize data structures for this PDF
+        pdf_stem = json_file.stem
+        ground_truth_bboxes[pdf_stem] = []
+        predicted_bboxes[pdf_stem] = []
         
         for page_data in pages_data:
             page_filename = page_data['file_name']
@@ -237,6 +248,41 @@ def evaluate_highlighting_function(highlighting_func: Callable, pdfs_dir: Path, 
             try:
                 # Call highlighting function to get predictions
                 predicted_boxes = highlighting_func(pdf_file, page_number, sentences)
+                
+                # Store ground truth bboxes for drawing
+                ground_truth_bboxes[pdf_stem].append({
+                    'page_number': page_number,
+                    'results': gt_results
+                })
+                
+                # Store predicted bboxes for drawing (convert to same format as ground truth)
+                pred_results = []
+                for pred in predicted_boxes:
+                    if pred.get('bbox'):
+                        # Convert absolute coordinates back to percentage if needed
+                        if isinstance(pred['bbox'], list) and len(pred['bbox']) == 4:
+                            # Convert from absolute [left, top, right, bottom] to percentage format
+                            left, top, right, bottom = pred['bbox']
+                            pred_results.append({
+                                'text': pred.get('sentence', ''),
+                                'bbox': {
+                                    'x': (left / page_width) * 100,
+                                    'y': (top / page_height) * 100,
+                                    'width': ((right - left) / page_width) * 100,
+                                    'height': ((bottom - top) / page_height) * 100
+                                }
+                            })
+                        elif isinstance(pred['bbox'], dict):
+                            # Already in percentage format
+                            pred_results.append({
+                                'text': pred.get('sentence', ''),
+                                'bbox': pred['bbox']
+                            })
+                
+                predicted_bboxes[pdf_stem].append({
+                    'page_number': page_number,
+                    'results': pred_results
+                })
                 
                 # Calculate AP for this page
                 ap = calculate_ap_for_page(predicted_boxes, gt_results, page_width, page_height)
@@ -264,6 +310,12 @@ def evaluate_highlighting_function(highlighting_func: Callable, pdfs_dir: Path, 
     
     # Calculate overall mAP
     overall_map = total_ap / total_pages if total_pages > 0 else 0.0
+    
+    # Draw bounding boxes on PDFs
+    function_name = highlighting_func.__name__
+    print(f"\nDrawing bounding boxes for function: {function_name}")
+    draw_processed_bboxes(str(pdfs_path), ground_truth_bboxes, predicted_bboxes, function_name)
+    print(f"Highlighted PDFs saved in {CFG.data_dir.joinpath(function_name)}/")
     
     results = {
         'overall_mAP_75': overall_map,
@@ -347,6 +399,7 @@ def save_results_to_excel(results: Dict, function_name: str, output_dir: str = N
 
 if __name__ == "__main__":
     from src.pymupdf_highlighter.row_highlighter import highlight_sentences_on_page
+    # from src.ocr_highlighter.ocr_highlighter import highlight_sentences_with_ocr
 
     # Example usage
     _pdfs_dir = CFG.pdf_dir
