@@ -83,20 +83,28 @@ def highlight_sentences_with_ocr(pdf_path, page_number, sentences, table=True, t
             if box not in unique_boxes:
                 unique_boxes.append(box)
         
-        result.append({
-            'sentence': sentence,
-            'bbox': unique_boxes[0] if unique_boxes else []
-        })
-        
-        for box in unique_boxes:
-            # Convert box coordinates to PyMuPDF quad
-            quad = fitz.Quad(
-                fitz.Point(box[0], box[1]),  # top-left
-                fitz.Point(box[2], box[1]),  # top-right
-                fitz.Point(box[0], box[3]),  # bottom-left
-                fitz.Point(box[2], box[3])   # bottom-right
-            )
-            page.add_highlight_annot(quad)
+        # Add all unique boxes to results, not just the first one
+        if unique_boxes:
+            for box in unique_boxes:
+                result.append({
+                    'sentence': sentence,
+                    'bbox': box
+                })
+                
+                # Convert box coordinates to PyMuPDF quad
+                quad = fitz.Quad(
+                    fitz.Point(box[0], box[1]),  # top-left
+                    fitz.Point(box[2], box[1]),  # top-right
+                    fitz.Point(box[0], box[3]),  # bottom-left
+                    fitz.Point(box[2], box[3])   # bottom-right
+                )
+                page.add_highlight_annot(quad)
+        else:
+            # If no matches found, still add entry with empty bbox for consistency
+            result.append({
+                'sentence': sentence,
+                'bbox': []
+            })
     
     pdf.save(output_path)
     pdf.close()
