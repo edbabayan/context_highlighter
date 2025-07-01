@@ -1,0 +1,468 @@
+[
+  {
+    "id": 18,
+    "annotations": [
+      {
+        "id": 20,
+        "completed_by": 1,
+        "result": [
+          {
+            "original_width": 1650,
+            "original_height": 1275,
+            "image_rotation": 0,
+            "value": {
+              "x": 6.314908484794289,
+              "y": 76.53869969655818,
+              "width": 13.866757806816329,
+              "height": 1.9377463270502773,
+              "rotation": 0
+            },
+            "id": "IUNcgqIooL",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 1650,
+            "original_height": 1275,
+            "image_rotation": 0,
+            "value": {
+              "x": 6.314908484794289,
+              "y": 76.53869969655818,
+              "width": 13.866757806816329,
+              "height": 1.9377463270502773,
+              "rotation": 0,
+              "text": [
+                " Cash on Hand (line a minus b)"
+              ]
+            },
+            "id": "IUNcgqIooL",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          },
+          {
+            "original_width": 1650,
+            "original_height": 1275,
+            "image_rotation": 0,
+            "value": {
+              "x": 38.47537025271572,
+              "y": 76.62294953686471,
+              "width": 2.7993924210943675,
+              "height": 1.5164971255176027,
+              "rotation": 0
+            },
+            "id": "ESAb2OWXJG",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 1650,
+            "original_height": 1275,
+            "image_rotation": 0,
+            "value": {
+              "x": 38.47537025271572,
+              "y": 76.62294953686471,
+              "width": 2.7993924210943675,
+              "height": 1.5164971255176027,
+              "rotation": 0,
+              "text": [
+                "$0.00"
+              ]
+            },
+            "id": "ESAb2OWXJG",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          },
+          {
+            "original_width": 1650,
+            "original_height": 1275,
+            "image_rotation": 0,
+            "value": {
+              "x": 5.924295588827632,
+              "y": 86.22743133180956,
+              "width": 5.403478394205423,
+              "height": 1.4322472852110764,
+              "rotation": 0
+            },
+            "id": "SVYfekwi5D",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 1650,
+            "original_height": 1275,
+            "image_rotation": 0,
+            "value": {
+              "x": 5.924295588827632,
+              "y": 86.22743133180956,
+              "width": 5.403478394205423,
+              "height": 1.4322472852110764,
+              "rotation": 0,
+              "text": [
+                "Basic Grant"
+              ]
+            },
+            "id": "SVYfekwi5D",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          },
+          {
+            "original_width": 1650,
+            "original_height": 1275,
+            "image_rotation": 0,
+            "value": {
+              "x": 26.756983373716007,
+              "y": 86.22743133180956,
+              "width": 5.728989140844309,
+              "height": 1.34799744490455,
+              "rotation": 0
+            },
+            "id": "K50DnsymKA",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 1650,
+            "original_height": 1275,
+            "image_rotation": 0,
+            "value": {
+              "x": 26.756983373716007,
+              "y": 86.22743133180956,
+              "width": 5.728989140844309,
+              "height": 1.34799744490455,
+              "rotation": 0,
+              "text": [
+                "$580.00.00"
+              ]
+            },
+            "id": "K50DnsymKA",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2025-06-28T15:07:36.860894Z",
+        "updated_at": "2025-06-28T15:07:36.860906Z",
+        "draft_created_at": "2025-06-28T15:06:57.042911Z",
+        "lead_time": 71.619,
+        "prediction": {},
+        "result_count": 4,
+        "unique_id": "ba7fdae7-3141-4a78-9a71-e8a714eb85ea",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 18,
+        "project": 6,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "page_1.jpg",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "ocr": "\/data\/upload\/6\/b17b73de-11h_-_2020_NSDM_Federal_Financial_Report_-_Handout_1_for_Group_Exercis_856lGw5.jpg"
+    },
+    "meta": {},
+    "created_at": "2025-06-28T15:05:47.354064Z",
+    "updated_at": "2025-06-28T15:07:36.877098Z",
+    "inner_id": 1,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 6,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 19,
+    "annotations": [
+      {
+        "id": 21,
+        "completed_by": 1,
+        "result": [
+          {
+            "original_width": 1650,
+            "original_height": 1275,
+            "image_rotation": 0,
+            "value": {
+              "x": 6.184704186138737,
+              "y": 15.333470935789165,
+              "width": 18.228601811777327,
+              "height": 1.5164971255176098,
+              "rotation": 0
+            },
+            "id": "Bacw8fFSd_",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 1650,
+            "original_height": 1275,
+            "image_rotation": 0,
+            "value": {
+              "x": 6.184704186138737,
+              "y": 15.333470935789165,
+              "width": 18.228601811777327,
+              "height": 1.5164971255176098,
+              "rotation": 0,
+              "text": [
+                "Federal share of unliquidated obligations"
+              ]
+            },
+            "id": "Bacw8fFSd_",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          },
+          {
+            "original_width": 1650,
+            "original_height": 1275,
+            "image_rotation": 0,
+            "value": {
+              "x": 38.47537025271572,
+              "y": 15.164971255176097,
+              "width": 2.86449457042216,
+              "height": 1.600746965824145,
+              "rotation": 0
+            },
+            "id": "FxRL0-cGvI",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 1650,
+            "original_height": 1275,
+            "image_rotation": 0,
+            "value": {
+              "x": 38.47537025271572,
+              "y": 15.164971255176097,
+              "width": 2.86449457042216,
+              "height": 1.600746965824145,
+              "rotation": 0,
+              "text": [
+                "$0.00"
+              ]
+            },
+            "id": "FxRL0-cGvI",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          },
+          {
+            "original_width": 1650,
+            "original_height": 1275,
+            "image_rotation": 0,
+            "value": {
+              "x": 5.989397738155408,
+              "y": 31.17244091341754,
+              "width": 13.280838462866342,
+              "height": 1.5164971255176027,
+              "rotation": 0
+            },
+            "id": "6k-O-TkmDT",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 1650,
+            "original_height": 1275,
+            "image_rotation": 0,
+            "value": {
+              "x": 5.989397738155408,
+              "y": 31.17244091341754,
+              "width": 13.280838462866342,
+              "height": 1.5164971255176027,
+              "rotation": 0,
+              "text": [
+                "One-Stop Infrastructure Costs"
+              ]
+            },
+            "id": "6k-O-TkmDT",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          },
+          {
+            "original_width": 1650,
+            "original_height": 1275,
+            "image_rotation": 0,
+            "value": {
+              "x": 26.756983373716007,
+              "y": 31.088191073111,
+              "width": 2.669188122438822,
+              "height": 1.4322472852110764,
+              "rotation": 0
+            },
+            "id": "vHsNqlHtj-",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 1650,
+            "original_height": 1275,
+            "image_rotation": 0,
+            "value": {
+              "x": 26.756983373716007,
+              "y": 31.088191073111,
+              "width": 2.669188122438822,
+              "height": 1.4322472852110764,
+              "rotation": 0,
+              "text": [
+                "$0.00"
+              ]
+            },
+            "id": "vHsNqlHtj-",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          },
+          {
+            "original_width": 1650,
+            "original_height": 1275,
+            "image_rotation": 0,
+            "value": {
+              "x": 6.087050962147075,
+              "y": 46.20033220217532,
+              "width": 13.24828738820246,
+              "height": 1.2974475407206256,
+              "rotation": 0
+            },
+            "id": "R961uCeHWl",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 1650,
+            "original_height": 1275,
+            "image_rotation": 0,
+            "value": {
+              "x": 6.087050962147075,
+              "y": 46.20033220217532,
+              "width": 13.24828738820246,
+              "height": 1.2974475407206256,
+              "rotation": 0,
+              "text": [
+                "Total program income earned"
+              ]
+            },
+            "id": "R961uCeHWl",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          },
+          {
+            "original_width": 1650,
+            "original_height": 1275,
+            "image_rotation": 0,
+            "value": {
+              "x": 48.91124478995827,
+              "y": 46.10765737783814,
+              "width": 5.80060150510483,
+              "height": 1.2974475407206258,
+              "rotation": 0
+            },
+            "id": "MV-0bot9TM",
+            "from_name": "bbox",
+            "to_name": "image",
+            "type": "rectangle",
+            "origin": "manual"
+          },
+          {
+            "original_width": 1650,
+            "original_height": 1275,
+            "image_rotation": 0,
+            "value": {
+              "x": 48.91124478995827,
+              "y": 46.10765737783814,
+              "width": 5.80060150510483,
+              "height": 1.2974475407206258,
+              "rotation": 0,
+              "text": [
+                "$289,541.44"
+              ]
+            },
+            "id": "MV-0bot9TM",
+            "from_name": "transcription",
+            "to_name": "image",
+            "type": "textarea",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2025-06-28T15:08:51.898385Z",
+        "updated_at": "2025-06-28T15:09:35.266679Z",
+        "draft_created_at": "2025-06-28T15:07:57.578485Z",
+        "lead_time": 117.008,
+        "prediction": {},
+        "result_count": 6,
+        "unique_id": "bedaa190-db25-4608-b599-0bd261efcce2",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 19,
+        "project": 6,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "page_2.jpg",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "ocr": "\/data\/upload\/6\/2ec87f70-11h_-_2020_NSDM_Federal_Financial_Report_-_Handout_1_for_Group_Exercis_RU4rczn.jpg"
+    },
+    "meta": {},
+    "created_at": "2025-06-28T15:05:47.354146Z",
+    "updated_at": "2025-06-28T15:09:35.285640Z",
+    "inner_id": 2,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 0,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 6,
+    "updated_by": 1,
+    "comment_authors": []
+  }
+]

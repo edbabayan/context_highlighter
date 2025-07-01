@@ -13,7 +13,7 @@ from src.config import CFG
 from src.ocr_highlighter.table_extractor import extract_tables_from_pdf
 
 
-def highlight_sentences_with_ocr(pdf_path, output_path, page_number, sentences, table=False, table_index=0):
+def highlight_sentences_with_ocr(pdf_path, page_number, sentences, table=True, table_index=0, output_path=None):
     """
     Highlight multiple sentences on a specific page using OCR to find text locations.
     
@@ -24,6 +24,10 @@ def highlight_sentences_with_ocr(pdf_path, output_path, page_number, sentences, 
         sentences: List of sentences to highlight
         table: Boolean flag to enable table-based filtering
         table_index: Index of the table to filter by (0-indexed)
+        
+    Returns:
+        List of dictionaries with sentence and bounding box
+        Format: [{'sentence': str, 'bbox': [left, top, right, bottom]}, ...]
     """
     pdf = fitz.open(pdf_path)
 
@@ -32,7 +36,7 @@ def highlight_sentences_with_ocr(pdf_path, output_path, page_number, sentences, 
     if page_number < 1 or page_number > len(pdf):
         logger.error(f"Invalid page number {page_number}")
         pdf.close()
-        return
+        return []
     
     page = pdf[page_number - 1]
     
@@ -67,13 +71,24 @@ def highlight_sentences_with_ocr(pdf_path, output_path, page_number, sentences, 
             selected_table = tables_data[table_index]
             table_bbox = selected_table['bbox']
     
-    highlighted_count = 0
+    result = []
     
     for sentence in sentences:
         # Find sentence in OCR text using fuzzy matching
         found_boxes = _find_sentence_boxes(sentence, ocr_data, scale_factor, table_bbox)
         
+        # Remove duplicate boxes
+        unique_boxes = []
         for box in found_boxes:
+            if box not in unique_boxes:
+                unique_boxes.append(box)
+        
+        result.append({
+            'sentence': sentence,
+            'bbox': unique_boxes[0] if unique_boxes else []
+        })
+        
+        for box in unique_boxes:
             # Convert box coordinates to PyMuPDF quad
             quad = fitz.Quad(
                 fitz.Point(box[0], box[1]),  # top-left
@@ -82,11 +97,11 @@ def highlight_sentences_with_ocr(pdf_path, output_path, page_number, sentences, 
                 fitz.Point(box[2], box[3])   # bottom-right
             )
             page.add_highlight_annot(quad)
-            highlighted_count += 1
     
     pdf.save(output_path)
     pdf.close()
     logger.success(f"Highlighted text regions using OCR on page {page_number}, saved to {output_path}")
+    return result
 
 
 def _find_sentence_boxes(sentence, ocr_data, scale_factor, table_bbox=None):
@@ -153,10 +168,14 @@ def _find_sentence_boxes(sentence, ocr_data, scale_factor, table_bbox=None):
             block = text_blocks[block_idx]
             target_word = words[word_idx]
             
-            # Use fuzzy matching for individual words
-            similarity = difflib.SequenceMatcher(None, block['word'], target_word).ratio()
+            # Use exact matching for numeric values, fuzzy matching for text
+            if re.match(r'^\d+\.?\d*$', target_word):  # If target is numeric
+                match = block['word'] == target_word
+            else:  # Use fuzzy matching for text
+                similarity = difflib.SequenceMatcher(None, block['word'], target_word).ratio()
+                match = similarity > 0.8  # 80% similarity threshold
             
-            if similarity > 0.8:  # 80% similarity threshold
+            if match:
                 matched_blocks.append(block)
                 word_idx += 1
             elif matched_blocks:  # If we had matches but this doesn't match, stop

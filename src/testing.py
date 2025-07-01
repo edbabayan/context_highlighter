@@ -1,17 +1,19 @@
-from src.highlighters.row_highlighter import highlight_sentences_on_page
+from src.pymupdf_highlighter.row_highlighter import highlight_sentences_on_page
 from src.config import CFG
 
-_pdf_path = "/Users/eduard_babayan/Documents/context_highlighter/Document.pdf"
+_pdf_path = "/Users/eduard_babayan/Documents/epam_projects/context_highlighter/Document.pdf"
 
 sentences_to_highlight = [
-    "Employer-related common stock funds",
+    "Financial statements"
 ]
 
-target_page = 17
+target_page = 20
 
-highlight_sentences_on_page(
-    _pdf_path, 
-    CFG.row_highlighter_pdf_path, 
+boxes = highlight_sentences_on_page(
+    _pdf_path,
     target_page,
-    sentences_to_highlight
+    sentences_to_highlight,
+CFG.row_highlighter_pdf_path,
 )
+
+print('')

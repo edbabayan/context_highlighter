@@ -19,7 +19,7 @@ This project provides flexible text highlighting capabilities for PDF documents.
 Best for searchable PDFs with selectable text.
 
 ```python
-from src.highlighters.row_highlighter import highlight_sentences_on_page
+from src.pymupdf_highlighter.row_highlighter import highlight_sentences_on_page
 from src.config import CFG
 
 sentences_to_highlight = [
@@ -58,12 +58,13 @@ highlight_sentences_with_ocr(
 ## Quick Start
 
 ### Standard Highlighting (Searchable PDFs)
+
 ```python
-from src.highlighters.row_highlighter import highlight_sentences_on_page
+from src.pymupdf_highlighter.row_highlighter import highlight_sentences_on_page
 from src.config import CFG
 
 highlight_sentences_on_page(
-    "/path/to/document.pdf", 
+    "/path/to/document.pdf",
     CFG.row_highlighter_pdf_path,
     page_number=17,
     sentences=["Text to highlight"]
