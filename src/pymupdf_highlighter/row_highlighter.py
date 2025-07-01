@@ -33,19 +33,16 @@ def highlight_sentences_on_page(pdf_path, page_number, sentences, output_path=No
     
     for sentence in sentences:
         quads = page.search_for(sentence)
-        bbox = {}
         
         if quads:
             page.add_highlight_annot(quads)
-            # Use the first found quad as the bounding box
-            if quads:
-                first_quad = quads[0]
-                
+            # Return all found instances of the sentence
+            for quad in quads:
                 # Convert absolute coordinates to percentages
-                x_percent = (first_quad.x0 / page_width) * 100.0
-                y_percent = (first_quad.y0 / page_height) * 100.0
-                width_percent = ((first_quad.x1 - first_quad.x0) / page_width) * 100.0
-                height_percent = ((first_quad.y1 - first_quad.y0) / page_height) * 100.0
+                x_percent = (quad.x0 / page_width) * 100.0
+                y_percent = (quad.y0 / page_height) * 100.0
+                width_percent = ((quad.x1 - quad.x0) / page_width) * 100.0
+                height_percent = ((quad.y1 - quad.y0) / page_height) * 100.0
                 
                 bbox = {
                     'x': x_percent,
@@ -53,11 +50,17 @@ def highlight_sentences_on_page(pdf_path, page_number, sentences, output_path=No
                     'width': width_percent,
                     'height': height_percent
                 }
-        
-        result.append({
-            'sentence': sentence,
-            'bbox': bbox
-        })
+                
+                result.append({
+                    'sentence': sentence,
+                    'bbox': bbox
+                })
+        else:
+            # If no matches found, still add entry with empty bbox for consistency
+            result.append({
+                'sentence': sentence,
+                'bbox': {}
+            })
     
     # Only save PDF if output_path is provided
     if output_path:
