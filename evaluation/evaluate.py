@@ -4,6 +4,7 @@ from typing import List, Dict, Callable
 
 import numpy as np
 import pandas as pd
+from loguru import logger
 
 from config import CFG
 from draw_processed_bboxes import draw_processed_bboxes
@@ -180,18 +181,24 @@ def calculate_ap_for_page(predicted_boxes: List[Dict], ground_truth_boxes: List[
     return ap
 
 
-def evaluate_highlighting_function(highlighting_func: Callable, pdfs_dir: Path, processed_json_dir: Path) -> Dict:
+def evaluate_highlighting_function(highlighter_class, pdfs_dir: Path, processed_json_dir: Path, **highlighter_kwargs) -> Dict:
     """
-    Evaluate a highlighting function using mean Average Precision at IoU 0.75.
+    Evaluate a highlighting class using mean Average Precision at IoU 0.75.
     
     Args:
-        highlighting_func: Function that takes (pdf_path, page_num, sentences) and returns bounding boxes
+        highlighter_class: Highlighter class to evaluate (e.g., OCRHighlighter, PyMuPDFHighlighter)
         pdfs_dir: Directory containing PDF files
         processed_json_dir: Directory containing processed JSON annotation files
+        **highlighter_kwargs: Additional arguments to pass to the highlighter
         
     Returns:
         Dictionary with evaluation metrics
     """
+    # Create highlighter instance
+    highlighter = highlighter_class()
+    class_name = highlighter.__class__.__name__
+    
+    logger.info(f"Starting evaluation of {class_name}")
     pdfs_path = pdfs_dir
     json_path = processed_json_dir
     
@@ -211,8 +218,9 @@ def evaluate_highlighting_function(highlighting_func: Callable, pdfs_dir: Path, 
         pdf_name = json_file.stem + '.pdf'
         pdf_file = pdfs_path / pdf_name
         
+        logger.debug(f"Processing file: {pdf_name}")
         if not pdf_file.exists():
-            print(f"Warning: PDF file not found for {json_file.name}")
+            logger.warning(f"Warning: PDF file not found for {json_file.name}")
             continue
         
         # Load ground truth annotations
@@ -247,7 +255,7 @@ def evaluate_highlighting_function(highlighting_func: Callable, pdfs_dir: Path, 
             
             try:
                 # Call highlighting function to get predictions
-                predicted_boxes = highlighting_func(pdf_file, page_number, sentences)
+                predicted_boxes = highlighter.highlight(str(pdf_file), page_number, sentences, **highlighter_kwargs)
                 
                 # Store ground truth bboxes for drawing
                 ground_truth_bboxes[pdf_stem].append({
@@ -292,10 +300,10 @@ def evaluate_highlighting_function(highlighting_func: Callable, pdfs_dir: Path, 
                 total_ap += ap
                 total_pages += 1
                 
-                print(f"Page {page_number} of {json_file.name}: AP = {ap:.3f}")
+                logger.info(f"Page {page_number} of {json_file.name}: AP = {ap:.3f}")
                 
             except Exception as e:
-                print(f"Error processing page {page_number} of {json_file.name}: {e}")
+                logger.error(f"Error processing page {page_number} of {json_file.name}: {e}")
                 continue
         
         if file_ap_scores:
@@ -306,16 +314,16 @@ def evaluate_highlighting_function(highlighting_func: Callable, pdfs_dir: Path, 
                 'ap_scores': file_ap_scores,
                 'page_numbers': file_page_numbers
             }
-            print(f"File {json_file.name}: mAP = {file_map:.3f} ({len(file_ap_scores)} pages)")
+            logger.info(f"File {json_file.name}: mAP = {file_map:.3f} ({len(file_ap_scores)} pages)")
     
     # Calculate overall mAP
     overall_map = total_ap / total_pages if total_pages > 0 else 0.0
     
     # Draw bounding boxes on PDFs
-    function_name = highlighting_func.__name__
-    print(f"\nDrawing bounding boxes for function: {function_name}")
+    function_name = class_name
+    logger.debug(f"\nDrawing bounding boxes for function: {function_name}")
     draw_processed_bboxes(str(pdfs_path), ground_truth_bboxes, predicted_bboxes, function_name)
-    print(f"Highlighted PDFs saved in {CFG.data_dir.joinpath(function_name)}/")
+    logger.success(f"Highlighted PDFs saved in {CFG.data_dir.joinpath(function_name)}/")
     
     results = {
         'overall_mAP_75': overall_map,
@@ -398,35 +406,33 @@ def save_results_to_excel(results: Dict, function_name: str, output_dir: str = N
 
 
 if __name__ == "__main__":
-    # from src.pymupdf_highlighter.row_highlighter import highlight_sentences_on_page
-    from src.ocr_highlighter.ocr_highlighter import highlight_sentences_with_ocr
-
+    from src.highlighters.pymupdf.highlighter import PyMuPDFHighlighter
+    
     # Example usage
     _pdfs_dir = CFG.pdf_dir
     _processed_json_dir = CFG.processed_json_dir
     
-    print("Starting evaluation...")
-    print(f"PDFs directory: {_pdfs_dir}")
-    print(f"Processed JSON directory: {_processed_json_dir}")
+    logger.info("Starting evaluation...")
     
-    # Run evaluation
+    # Run evaluation with class and kwargs
     _results = evaluate_highlighting_function(
-        highlight_sentences_with_ocr,
+        PyMuPDFHighlighter,
         _pdfs_dir,
-        _processed_json_dir
+        _processed_json_dir,
     )
     
-    print("\n" + "="*60)
-    print("EVALUATION RESULTS")
-    print("="*60)
-    print(f"Overall mAP@0.75: {_results['overall_mAP_75']:.3f}")
-    print(f"Total pages evaluated: {_results['total_pages_evaluated']}")
+    logger.info("\n" + "="*60)
+    logger.info("EVALUATION RESULTS")
+    logger.info("="*60)
+    logger.info(f"Overall mAP@0.75: {_results['overall_mAP_75']:.3f}")
+    logger.info(f"Total pages evaluated: {_results['total_pages_evaluated']}")
     
-    print("\nPer-file results:")
+    logger.info("\nPer-file results:")
     for _filename, _file_result in _results['file_results'].items():
-        print(f"  {_filename}: mAP = {_file_result['mAP']:.3f} ({_file_result['num_pages']} pages)")
+        logger.info(f"  {_filename}: mAP = {_file_result['mAP']:.3f} ({_file_result['num_pages']} pages)")
     
-    # Save results to Excel
-    _function_name = highlight_sentences_with_ocr.__name__
+    # Save results to Excel - extract class name
+    _function_name = PyMuPDFHighlighter.__name__
     _excel_path = save_results_to_excel(_results, _function_name)
-    print(f"\nResults saved to Excel file: {_excel_path}")
+    logger.info(f"\nResults saved to Excel file: {_excel_path}")
+    logger.info(f"Evaluation logs saved to: {CFG.data_dir / 'evaluation_OCRHighlighter.log'}")

@@ -1,6 +1,43 @@
+"""
+PDF Bounding Box Visualization Module.
+
+This module provides functionality to draw bounding boxes on PDF documents for
+visual comparison between ground truth annotations and model predictions.
+It creates highlighted PDFs with color-coded bounding boxes to help evaluate
+and debug text highlighting algorithms.
+
+Features:
+- Draw ground truth bounding boxes in red
+- Draw predicted bounding boxes in blue
+- Support for percentage-based coordinate systems
+- Batch processing of multiple PDF files
+- Automatic output directory creation
+- Support for page-specific annotations
+
+Color Coding:
+- Red boxes: Ground truth annotations
+- Blue boxes: Model predictions
+- Overlapping areas help identify correct vs incorrect predictions
+
+Usage:
+    # Draw bboxes for evaluation results
+    draw_processed_bboxes(
+        pdf_dir="data/pdfs",
+        ground_truth_bboxes=gt_data,
+        predicted_bboxes=pred_data,
+        function_name="OCR_highlighter"
+    )
+    
+    # Legacy single-page drawing
+    draw_bboxes_from_processed_json()
+"""
+
 import json
-import fitz  # PyMuPDF
 from pathlib import Path
+
+import fitz  # PyMuPDF
+from loguru import logger
+
 from config import CFG
 
 
@@ -28,7 +65,7 @@ def draw_processed_bboxes(pdf_dir, ground_truth_bboxes, predicted_bboxes, functi
         if pdf_name not in ground_truth_bboxes and pdf_name not in predicted_bboxes:
             continue
             
-        print(f"Processing PDF: {pdf_name}")
+        logger.info(f"Processing PDF: {pdf_name}")
         
         # Open PDF
         pdf = fitz.open(str(pdf_file))
@@ -85,7 +122,7 @@ def draw_processed_bboxes(pdf_dir, ground_truth_bboxes, predicted_bboxes, functi
         pdf.save(str(output_path))
         pdf.close()
         
-        print(f"Saved highlighted PDF: {output_path}")
+        logger.success(f"Saved highlighted PDF: {output_path}")
 
 
 def draw_bboxes_from_processed_json():
@@ -103,16 +140,13 @@ def draw_bboxes_from_processed_json():
         pages_data = json.load(f)
     
     if not pages_data:
-        print("No pages found in processed JSON")
+        logger.warning("No pages found in processed JSON")
         return
     
     # Get the first page object
     first_page = pages_data[0]
     page_filename = first_page['file_name']
     results = first_page['results']
-    
-    print(f"Processing first page: {page_filename}")
-    print(f"Number of text results: {len(results)}")
     
     # Extract page number from filename (e.g., "25.png" -> 25)
     page_number = int(page_filename.split('.')[0])
@@ -122,7 +156,7 @@ def draw_bboxes_from_processed_json():
     
     # Check if page number is valid
     if page_number < 1 or page_number > len(pdf):
-        print(f"Invalid page number {page_number}")
+        logger.warning(f"Invalid page number {page_number}")
         pdf.close()
         return
     
@@ -133,8 +167,6 @@ def draw_bboxes_from_processed_json():
     page_rect = page.rect
     page_width = page_rect.width
     page_height = page_rect.height
-    
-    print(f"Page {page_number} dimensions: {page_width} x {page_height}")
     
     # Convert percentage coordinates to PDF coordinates and draw
     for result in results:
@@ -150,17 +182,12 @@ def draw_bboxes_from_processed_json():
         # Create rectangle (left, top, right, bottom)
         rect = fitz.Rect(x, y, x + width, y + height)
         
-        print(f"Text '{text}': bbox {rect}")
-        
         # Draw bounding box in red
         page.draw_rect(rect, color=(1, 0, 0), width=2)
     
     # Save the result
     pdf.save(output_path)
     pdf.close()
-    
-    print(f"Bounding boxes drawn and saved to: {output_path}")
-    print(f"Drew {len(results)} red bounding boxes")
 
 
 if __name__ == "__main__":

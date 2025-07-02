@@ -8,5 +8,4 @@ class CFG:
     json_dir = data_dir.joinpath("json_files")
     
     # Output directories
-    evaluation_dir = root.joinpath("evaluation")
     processed_json_dir = data_dir.joinpath("processed_json")

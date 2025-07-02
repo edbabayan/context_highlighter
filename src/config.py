@@ -8,4 +8,4 @@ class CFG:
     tables_dir = temp_dir.joinpath("tables.json")
     table_images_dir = temp_dir.joinpath("tables_tables.png")
 
-    row_highlighter_pdf_path = root.joinpath("highlighted_row.pdf")
+    inference_pdf_path = root.joinpath("highlighted_doc.pdf")

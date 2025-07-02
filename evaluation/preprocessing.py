@@ -1,8 +1,33 @@
+"""
+Data Preprocessing Module for PDF Text Highlighting Evaluation.
+
+This module handles the preprocessing of annotation data from LabelStudio or similar
+annotation tools into a standardized format for evaluation. It converts raw annotation
+JSON files into clean, structured data that can be used by the evaluation system.
+
+Features:
+- Clean and standardize annotation data from various sources
+- Group annotations by page number for efficient processing
+- Extract text and bounding box information
+- Handle multiple annotation formats and edge cases
+- Batch processing of multiple annotation files
+
+Usage:
+    # Process all annotation files
+    process_all_json_files()
+    
+    # Process a single file
+    cleaned_data = clean_json_file("annotations.json")
+"""
+
 import json
+from pathlib import Path
+from typing import List, Dict, Any
+
 from config import CFG
 
 
-def clean_json_file(input_file_path):
+def clean_json_file(input_file_path: Path) -> List[Dict[str, Any]]:
     """Clean a single JSON file and organize results by page number."""
     with open(input_file_path, 'r') as f:
         data = json.load(f)
@@ -95,7 +120,3 @@ def process_all_json_files():
             json.dump(cleaned_data, f, indent=2)
         
         print(f"Processed: {json_file.name} -> {len(cleaned_data)} pages")
-
-
-if __name__ == "__main__":
-    process_all_json_files()
