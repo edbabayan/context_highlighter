@@ -1,48 +1,71 @@
 # Context Highlighter
 
-A Python tool for highlighting text phrases in PDF documents using standard text search or OCR-based highlighting.
+A Python tool for highlighting text phrases in PDF documents using OCR or PyMuPDF-based text search.
 
 ## Features
 
-- **Dual Methods**: Standard text search for searchable PDFs, OCR for scanned documents
-- **Fuzzy Matching**: Handles OCR errors with intelligent text matching
-- **Simple Interface**: Same function signature for both methods
+- **Class-Based Architecture**: Extensible highlighter classes with inheritance
+- **OCR Highlighter**: Find text in scanned documents with table filtering
+- **PyMuPDF Highlighter**: Fast text search for searchable PDFs
+- **Evaluation System**: Comprehensive mAP-based evaluation with visualization
 
 ## Usage
 
-### Standard Text Search
+### OCR-Based Highlighting
 ```python
-from src.pymupdf_highlighter.row_highlighter import highlight_sentences_on_page
+from src.highlighters.ocr.highlighter import OCRHighlighter
 
-highlight_sentences_on_page(
+highlighter = OCRHighlighter()
+results = highlighter.highlight(
     pdf_path="document.pdf",
+    page_number=1,
+    sentences=["Text to highlight"],
     output_path="highlighted.pdf",
-    page_number=17,
-    sentences=["Text to highlight"]
+    table=True,
+    table_index=0
 )
 ```
 
-### OCR-Based Highlighting
+### PyMuPDF Highlighting
 ```python
-from src.ocr_highlighter.ocr_highlighter import highlight_sentences_with_ocr
+from src.highlighters.pymupdf.highlighter import PyMuPDFHighlighter
 
-highlight_sentences_with_ocr(
-    pdf_path="scanned_document.pdf",
-    output_path="highlighted_ocr.pdf",
-    page_number=17,
-    sentences=["Text to highlight"]
+highlighter = PyMuPDFHighlighter()
+results = highlighter.highlight(
+    pdf_path="document.pdf", 
+    page_number=1,
+    sentences=["Text to highlight"],
+    output_path="highlighted.pdf"
+)
+```
+
+### Evaluation
+```python
+from evaluation.evaluate import evaluate_highlighting_function
+from src.highlighters.ocr.highlighter import OCRHighlighter
+from src.config import CFG
+
+results = evaluate_highlighting_function(
+    OCRHighlighter,
+    CFG.pdf_dir,
+    CFG.processed_json_dir,
+    table=True,
+    table_index=0
 )
 ```
 
 ## Installation
 
 ```bash
+# Create virtual environment
+python -m venv venv
+
+# Activate virtual environment
+# On Windows:
+venv\Scripts\activate
+# On macOS/Linux:
+source venv/bin/activate
+
+# Install dependencies
 pip install -r requirements.txt
-```
-
-## Testing
-
-```bash
-python src/testing.py          # Standard highlighting
-python src/ocr_testing.py      # OCR highlighting
 ```
