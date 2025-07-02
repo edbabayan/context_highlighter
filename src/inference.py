@@ -63,19 +63,6 @@ highlighter = OCRHighlighter()
 
 # Perform the highlighting operation
 print("⚡ Starting text highlighting process...")
-print("   - Converting PDF page to image for OCR analysis")
-print("   - Detecting text regions using machine learning")
-print("   - Applying highlights to found text")
-print("   - Saving highlighted PDF")
-
-# Execute the highlighting
-# Parameters explained:
-# - _pdf_path: Input PDF file path
-# - target_page: Page number to process (1-indexed)
-# - sentences_to_highlight: List of texts to find
-# - CFG.inference_pdf_path: Output path for highlighted PDF
-# - table=True: Enable table filtering (focuses search within tables)
-# - table_index=0: Use the first table found on the page
 
 boxes = highlighter.highlight(
     pdf_path=_pdf_path,
@@ -103,16 +90,3 @@ print(f"   • Total texts searched: {len(sentences_to_highlight)}")
 print(f"   • Texts found and highlighted: {len(found_texts)}")
 print(f"   • Texts not found: {len(not_found_texts)}")
 print(f"   • Success rate: {len(found_texts)/len(sentences_to_highlight)*100:.1f}%")
-
-# Display detailed results
-print(f"\n📍 DETAILED RESULTS:")
-for i, result in enumerate(boxes, 1):
-    sentence = result['sentence']
-    bbox = result.get('bbox', {})
-
-    if bbox:
-        print(f"   ✅ {i}. '{sentence}' - FOUND")
-        print(f"      📐 Position: x={bbox['x']:.1f}%, y={bbox['y']:.1f}%")
-        print(f"      📏 Size: {bbox['width']:.1f}% × {bbox['height']:.1f}%")
-    else:
-        print(f"   ❌ {i}. '{sentence}' - NOT FOUND")
