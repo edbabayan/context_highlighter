@@ -24,7 +24,19 @@ class Highlighter(ABC):
             **kwargs: Additional arguments specific to each implementation
             
         Returns:
-            List of dictionaries with sentence and bounding box information
-            Format: [{'sentence': str, 'bbox': {'x': %, 'y': %, 'width': %, 'height': %}}, ...]
+            List of dictionaries with sentence and bounding box information.
+            Output format should strictly be:
+            [{'sentence': str, 'bbox': {'x': %, 'y': %, 'width': %, 'height': %}}, ...]
+            
+            Where:
+            - 'sentence': The original sentence that was searched for
+            - 'bbox': Dictionary with percentage-based coordinates:
+                - 'x': Left position as percentage of page width
+                - 'y': Top position as percentage of page height  
+                - 'width': Width as percentage of page width
+                - 'height': Height as percentage of page height
+            - If sentence not found, bbox should be empty dict: {}
         """
-        pass
+        # Ensure implementation returns the correct format
+        raise NotImplementedError("Subclasses must implement highlight() method and return "
+                                 "format: [{'sentence': str, 'bbox': {'x': %, 'y': %, 'width': %, 'height': %}}, ...]")
